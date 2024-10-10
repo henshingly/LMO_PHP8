@@ -29,7 +29,7 @@ foreach($get as $value) {
 @ini_set("arg_separator.output","&amp;");
 
 if (session_id()=="") session_start();
-require(dirname(__FILE__).'/config/init-parameters.php');
+require(__DIR__.'/config/init-parameters.php');
 
 if (isset($_GET['debug']) || isset($_SESSION['debug'])) {
   $_SESSION['debug']=TRUE;

@@ -19,11 +19,11 @@
   */
   
 
-if (!file_exists(dirname(__FILE__)."/config/init-parameters.php") || isset($_POST['lmo_install_step'])) {
-  include(dirname(__FILE__)."/install/install.php");
+if (!file_exists(__DIR__."/config/init-parameters.php") || isset($_POST['lmo_install_step'])) {
+  include(__DIR__."/install/install.php");
 } else {
   define('LMO_AUTH', 1);
-  require(dirname(__FILE__).'/init.php');
+  require(__DIR__.'/init.php');
   $subdir='';
   if(!isset($_SESSION["lmouserok"])){$_SESSION["lmouserok"]=0;}
   if(!isset($_SESSION["lmousername"])){$_SESSION["lmousername"]="";}

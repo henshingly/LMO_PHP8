@@ -19,7 +19,7 @@
   */
   
   
-require(dirname(__FILE__)."/../../init.php");
+require(__DIR__."/../../init.php");
 $_SESSION['lmouserlang']=isset($_GET['lmouserlang'])?$_GET['lmouserlang']:(isset($_SESSION['lmouserlang'])?$_SESSION['lmouserlang']:'Deutsch');
 
 $lang=array(

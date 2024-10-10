@@ -18,7 +18,7 @@
   */
   
   
-require_once(dirname(__FILE__).'/../../init.php');
+require_once(__DIR__.'/../../init.php');
 define('LMO_TIPPAUTH', 1);
 if (!isset($_SESSION["lmouserok"])) {
   $_SESSION["lmouserok"] = 0;

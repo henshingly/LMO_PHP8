@@ -18,7 +18,7 @@
   * $Id$
   */
   
-require(dirname(__FILE__).'/../../init.php');
+require(__DIR__.'/../../init.php');
 require_once(PATH_TO_ADDONDIR."/classlib/ini.php");
 ?>
 <script src="<?php echo URL_TO_JSDIR?>/viewer.js" type="text/javascript"></script>
@@ -203,7 +203,7 @@ if($form3) {
   </div>
   <div class="row p-1">
     <div class="col-8 offset-2 d-flex justify-content-center">
-      <textarea class="form-control" rows="6" cols="80"><?php echo trim("\n<?php \n\$multi='".$save_file_name."';\ninclude('".dirname(__FILE__)."/viewer.php');\n?>");?></textarea>
+      <textarea class="form-control" rows="6" cols="80"><?php echo trim("\n<?php \n\$multi='".$save_file_name."';\ninclude('".__DIR__."/viewer.php');\n?>");?></textarea>
     </div>
   </div>
   <div class="row p-1">

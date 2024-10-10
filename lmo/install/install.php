@@ -333,7 +333,7 @@ $_SESSION['man']=!empty($_REQUEST['man'])?TRUE:FALSE;
 $patherror = $urlerror = $installerror = $loginerror ='';
 $error = 0;
 
-$lmo_dir = dirname(dirname(__FILE__));
+$lmo_dir = dirname(__DIR__);
 
 
 $path=str_replace('\\','/',$lmo_dir);
@@ -408,14 +408,14 @@ if ($lmo_install_step==1) {
                     fclose($auth_file);
                   }
                   // Copy install/cfg.txt  if cfg.txt not exists
-                  $ftp->put(dirname(__FILE__)."/".$file, $file);
+                  $ftp->put(__DIR__."/".$file, $file);
                   $ftp->chmod($file,$chmod);
                 } else {
                   if (strpos($file,"cfg.txt")!==FALSE) {
                     //Merge config files
                     //read config files
                     $cfg_old = parse_ini_file($lmo_dir."/".$file);
-                    $cfg_new = parse_ini_file(dirname(__FILE__)."/".$file);
+                    $cfg_new = parse_ini_file(__DIR__."/".$file);
                     //merge config files
                     foreach ($cfg_new as $new_key=>$new_value) {
                       if (!array_key_exists($new_key,$cfg_old)) {
