@@ -73,41 +73,23 @@ while($files=readdir($verz)){
       }
       if($ligadatei[$liga_counter]['aktueller_spieltag']!=""){
         if($ligadatei[$liga_counter]['rundenbezeichnung']!=$text[2]){  //Pokal
-          $t5=strlen(decbin($ligadatei[$liga_counter]['anz_teams']));
-          $Number_of_teams = $ligadatei[$liga_counter]['anz_teams'];
+          $countTeams = $ligadatei[$liga_counter]['anz_teams'];
+          $t5=strlen(decbin($countTeams));
           switch ($ligadatei[$liga_counter]['aktueller_spieltag']) {
             case ($t5):
-              if ($Number_of_teams == 24) {  // Falls das KO-Turnier mit 24 Mannschaften erstellt wurde - Finale
-                $ligadatei[$liga_counter]['rundenbezeichnung'] = $text[374];
-              }
+              $countTeams == 24 ? $ligadatei[$liga_counter]['rundenbezeichnung']=$text[374] : $ligadatei[$liga_counter]['rundenbezeichnung']="";
               break;
             case ($t5-1):
-              if ($Number_of_teams == 24) {  // Falls das KO-Turnier mit 24 Mannschaften erstellt wurde - vierte Runde (Halbfinale)
-                $ligadatei[$liga_counter]['rundenbezeichnung']=$text[373];
-              } else {
-                $ligadatei[$liga_counter]['rundenbezeichnung']=$text[374];
-              }
+              $countTeams == 24 ? $ligadatei[$liga_counter]['rundenbezeichnung']=$text[373] : $ligadatei[$liga_counter]['rundenbezeichnung']=$text[374];
               break;
             case ($t5-2):
-              if ($Number_of_teams == 24) {  // Falls das KO-Turnier mit 24 Mannschaften erstellt wurde - dritte Runde (Viertelfinale)
-                $ligadatei[$liga_counter]['rundenbezeichnung']=$text[372];
-              } else {
-                $ligadatei[$liga_counter]['rundenbezeichnung']=$text[373];
-              }
+              $countTeams == 24 ? $ligadatei[$liga_counter]['rundenbezeichnung']=$text[372] : $ligadatei[$liga_counter]['rundenbezeichnung']=$text[373];
               break;
             case ($t5-3):
-              if ($Number_of_teams == 24) {  // Falls das KO-Turnier mit 24 Mannschaften erstellt wurde - zweite Runde (Achtelfinale)
-                $ligadatei[$liga_counter]['rundenbezeichnung']=$text[371];
-              } else {
-                $ligadatei[$liga_counter]['rundenbezeichnung']=$text[372];
-              }
+              $countTeams == 24 ? $ligadatei[$liga_counter]['rundenbezeichnung']=$text[371] : $ligadatei[$liga_counter]['rundenbezeichnung']=$text[372];
               break;
             case ($t5-4):
-              if ($Number_of_teams == 24) {  // Falls das KO-Turnier mit 24 Mannschaften erstellt wurde - erste Runde (Runde 1)
-                $ligadatei[$liga_counter]['rundenbezeichnung']=$text[370]." 1";  // Habe hier fest die Zahl 1 eingfügt weil in Deiner lmo-dirlist.php die Variable ['aktueller_spieltag'] in einem KO-Turnier nicht dargestellt wird. Auch wenn es bei Turnieren ab 32 Teams Runden vorher gibt.
-              } else {
-                $ligadatei[$liga_counter]['rundenbezeichnung']=$text[371];
-              }
+              $countTeams == 24 ? $ligadatei[$liga_counter]['rundenbezeichnung']=$text[370]." 1" : $ligadatei[$liga_counter]['rundenbezeichnung']=$text[371];
               break;
           }
         }
