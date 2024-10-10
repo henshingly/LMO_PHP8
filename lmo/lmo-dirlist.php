@@ -75,6 +75,7 @@ while($files=readdir($verz)){
         if($ligadatei[$liga_counter]['rundenbezeichnung']!=$text[2]){  //Pokal
           $countTeams = $ligadatei[$liga_counter]['anz_teams'];
           $t5=strlen(decbin($countTeams));
+          $k=$ligadatei[$liga_counter]['aktueller_spieltag'];
           switch ($ligadatei[$liga_counter]['aktueller_spieltag']) {
             case ($t5):
               $countTeams == 24 ? $ligadatei[$liga_counter]['rundenbezeichnung']=$text[374] : $ligadatei[$liga_counter]['rundenbezeichnung']="";
@@ -89,7 +90,10 @@ while($files=readdir($verz)){
               $countTeams == 24 ? $ligadatei[$liga_counter]['rundenbezeichnung']=$text[371] : $ligadatei[$liga_counter]['rundenbezeichnung']=$text[372];
               break;
             case ($t5-4):
-              $countTeams == 24 ? $ligadatei[$liga_counter]['rundenbezeichnung']=$text[370]." 1" : $ligadatei[$liga_counter]['rundenbezeichnung']=$text[371];
+              $countTeams == 24 ? $ligadatei[$liga_counter]['rundenbezeichnung']=$text[370]." ".$k : $ligadatei[$liga_counter]['rundenbezeichnung']=$text[371];
+              break;
+            default:
+              $ligadatei[$liga_counter]['rundenbezeichnung']=$text[370]." ".$k;
               break;
           }
         }
