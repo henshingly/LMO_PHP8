@@ -36,7 +36,7 @@ if (($action == "admin") && ($todo == "download") && (($_SESSION["lmouserok"] ==
     closedir($verz);
     sort($dummy);
     if ($dummy[(int)$down-1] != ""  && check_hilfsadmin($dummy[(int)$down-1])) {
-      header("Content-Type: text/x-lmo3");
+      header("Content-Type: text/x-lmo4");
       header("Content-Disposition: attachment; filename=\"".$dummy[$down-1]."\"");
       readfile(sprintf("%s/%s", $dirliga, $dummy[$down-1]));
     }
@@ -56,7 +56,7 @@ if (($action == "admin") && ($todo == "download") && (($_SESSION["lmouserok"] ==
       $zipfile->open("ligen.zip", ZipArchive::CREATE);
       for($i = 0; $i < count($dummy); $i++) {
         if (check_hilfsadmin($dummy[$i])) {
-          $zipfile->addFile(PATH_TO_LMO.$dirliga.$dummy[$i], $dummy[$i]);
+          $zipfile->addFile(PATH_TO_LMO.'/'.$dirliga.$dummy[$i], $dummy[$i]);
         }
       }
       $zipfile->close();
