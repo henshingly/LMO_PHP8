@@ -46,19 +46,17 @@ if ($message != "") {
       $dummb = explode('|', $dumma[$tippernr]);
       if ($dummb[9] != -1 && $dummb[4] != "") {
         $textmessage = $message;
-        $textmessage = str_replace("[nick]", $dummb[0], $textmessage);
-        $textmessage = str_replace("[pass]", $dummb[1], $textmessage);
-        $textmessage = str_replace("[name]", $dummb[3], $textmessage);
+        $textmessage = str_replace(array("[nick]", "[pass]", "[name]"),array($dummb[0], $dummb[1], $dummb[3]), $textmessage);
         $mail->Body = iconv("UTF-8", "ISO-8859-1", $textmessage);
         $mail->addAddress($dummb[4]);
         if ($mail->send()) {
           $anzemail++;
           $mail->ClearAllRecipients(); 
-	  $mail->ClearReplyTos();
+		  $mail->ClearReplyTos();
         } else {
           $mail->ErrorInfo();
           $mail->ClearAllRecipients(); 
-	  $mail->ClearReplyTos();
+		  $mail->ClearReplyTos();
         }
       }
     }
