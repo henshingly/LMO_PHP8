@@ -41,14 +41,12 @@ if (isset($xtippername2)) {
       $mail->Body = iconv("UTF-8", "ISO-8859-1", $emailbody);
       $mail->addAddress($dummb[4]);
       if ($mail->send()) {
-        $mail->ClearAllRecipients(); 
-     	  $mail->ClearReplyTos();
- 	      echo $text['tipp'][78]."<br>";
+        $mail->ClearAllRecipients();
+		$mail->ClearReplyTos();
       } else {
         $mail->ErrorInfo();
         $mail->ClearAllRecipients(); 
- 	      $mail->ClearReplyTos();
- 	      echo $text['tipp'][80]."<br>";
+		$mail->ClearReplyTos();
       }
       $xtippername2 = "";    
     }
