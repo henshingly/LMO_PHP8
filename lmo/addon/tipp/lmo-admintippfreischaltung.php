@@ -19,15 +19,25 @@
   
 
 require_once(PATH_TO_ADDONDIR."/tipp/lmo-tipptest.php");
+require_once(PATH_TO_LMO."/includes/PHPMailer.php");
+
+$mail = new PHPMailer(true);
 $tipp_mailtext = str_replace(array('\n','[nick]','[pass]','[url]'),array("\n",$xtippernick,$xtipperpass,"http://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']."?action=tipp&xtippername=".$xtippernick."&xtipperpass=".$xtipperpass),$text['tipp'][298]);
-if (function_exists('ini_get') && @ini_get('safe_mode')=="0") {
-  $sent=mail($xtipperemail,$text['tipp'][77],$tipp_mailtext,"From:".$text['tipp'][0]." <".$aadr.">","-f ".$aadr);
+
+$mail->isMail();
+$mail->Subject = $text['tipp'][77];
+$mail->setFrom($aadr);
+  
+$mail->Body = iconv("UTF-8"," ISO-8859-1", $tipp_mailtext);
+$mail->addAddress($xtipperemail);
+if ($mail->send()) {
+    $mail->ClearAllRecipients(); 
+    $mail->ClearReplyTos();
+    echo getMessage($text['tipp'][78]);
 } else {
-  $sent=mail($xtipperemail,$text['tipp'][77],$tipp_mailtext,"From:".$text['tipp'][0]." <".$aadr.">");
-}
-if ($sent) {
-  echo getMessage($text['tipp'][78]);
-} else {
-  echo getMessage($text['tipp'][80],TRUE);
+    $mail->ErrorInfo();
+    $mail->ClearAllRecipients(); 
+    $mail->ClearReplyTos();
+    echo getMessage($text['tipp'][80],TRUE);
 }
 ?>
