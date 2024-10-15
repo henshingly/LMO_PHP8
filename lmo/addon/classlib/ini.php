@@ -1,6 +1,6 @@
-<?php 
+<?php
+
 /**
- *
  * classlib Addon for LigaManager Online
  * Copyright (C) 2003 by Tim Schumacher
  * timme@uni.de /
@@ -17,37 +17,33 @@
  * @access public
  * @version 2.8 RC1
  */
-
-
-
-require_once(__DIR__.'/../../init.php');
+require_once (__DIR__ . '/../../init.php');
 
 // classlib Dateien
 
-require_once(PATH_TO_ADDONDIR."/classlib/classes.php");
-require_once(PATH_TO_ADDONDIR."/classlib/functions.php");
-require_once(PATH_TO_ADDONDIR."/classlib/html_output.php");
-
+require_once (PATH_TO_ADDONDIR . '/classlib/classes.php');
+require_once (PATH_TO_ADDONDIR . '/classlib/functions.php');
+require_once (PATH_TO_ADDONDIR . '/classlib/html_output.php');
 
 // Weitere Klassen einbinden
 // class pdf
-require_once(PATH_TO_ADDONDIR."/classlib/classes/pdf/Cezpdf.php");         // Version 0.12.40
-include_once(PATH_TO_ADDONDIR."/classlib/classes/pdf/extensions/CezTableImage.php");
+require_once (PATH_TO_ADDONDIR . '/classlib/classes/pdf/Cezpdf.php');  // Version 0.12.40
+include_once (PATH_TO_ADDONDIR . '/classlib/classes/pdf/extensions/CezTableImage.php');
 // classes for image manipulation
-if (file_exists(PATH_TO_ADDONDIR."/classlib/classes/phpthumb/phpthumb.class.php") ){
-	require_once(PATH_TO_ADDONDIR."/classlib/classes/phpthumb/phpthumb.class.php");
+if (file_exists(PATH_TO_ADDONDIR . '/classlib/classes/phpthumb/phpthumb.class.php')) {
+    require_once (PATH_TO_ADDONDIR . '/classlib/classes/phpthumb/phpthumb.class.php');
 }
 if (!defined('CLASSLIB_VERSION_NR')) {
-  define('CLASSLIB_VERSION_NR','2.8');
+    define('CLASSLIB_VERSION_NR', '2.8');
 }
 if (!defined('CLASSLIB_VERSION')) {
-  define('CLASSLIB_VERSION',' (classlib&nbsp;'.CLASSLIB_VERSION_NR.')');
+    define('CLASSLIB_VERSION', ' (classlib&nbsp;' . CLASSLIB_VERSION_NR . ')');
 }
 if (!defined('CLASSLIB_IMG_TYPES')) {
-  define('CLASSLIB_IMG_TYPES',$cfgarray['classlib']['img_types']);
+    define('CLASSLIB_IMG_TYPES', $cfgarray['classlib']['img_types']);
 }
 if (!defined('CLASSLIB_INFO')) {
-  define('CLASSLIB_INFO',"Classlib ".CLASSLIB_VERSION_NR." &#169; <a href=\"mailto:webobjects@gmx.net?subject=LMO-KLASSENBIBLIOTHEK\" title=\"Send mail\">Timme</a>");
+    define('CLASSLIB_INFO', 'Classlib ' . CLASSLIB_VERSION_NR . ' &#169; <a href="mailto:webobjects@gmx.net?subject=LMO-KLASSENBIBLIOTHEK" title="Send mail">Timme</a>');
 }
 
 ?>

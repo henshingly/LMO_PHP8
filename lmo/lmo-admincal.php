@@ -1,26 +1,24 @@
-<?php 
-/** Liga Manager Online 4
-  *
-  * http://lmo.sourceforge.net/
-  *
-  * This program is free software; you can redistribute it and/or
-  * modify it under the terms of the GNU General Public License as
-  * published by the Free Software Foundation; either version 2 of
-  * the License, or (at your option) any later version.
-  * 
-  * This program is distributed in the hope that it will be useful,
-  * but WITHOUT ANY WARRANTY; without even the implied warranty of
-  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
-  * General Public License for more details.
-  *
-  * REMOVING OR CHANGING THE COPYRIGHT NOTICES IS NOT ALLOWED!
-  *
-  */
-  
-  
+<?php
 
-isset($_GET['abs'])?$abs=$_GET['abs']:$abs="";
-isset($_GET['feld'])?$feld=$_GET['feld']:$feld="";
+/**
+ * Liga Manager Online 4
+ *
+ * http://lmo.sourceforge.net/
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of
+ * the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * REMOVING OR CHANGING THE COPYRIGHT NOTICES IS NOT ALLOWED!
+ */
+isset($_GET['abs']) ? $abs = $_GET['abs'] : $abs = '';
+isset($_GET['feld']) ? $feld = $_GET['feld'] : $feld = '';
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 					"http://www.w3.org/TR/html4/loose.dtd">
@@ -63,34 +61,35 @@ function lmogeben(x){
 </script>
 </head>
 <body>
-<?php 
-$addi=$_SERVER['PHP_SELF']."?abs=".$abs."&amp;feld=".$feld;
+<?php
+$addi = $_SERVER['PHP_SELF'] . '?abs=' . $abs . '&amp;feld=' . $feld;
 $dat = time();
 $dat0 = getdate($dat);
-$datj=$dat0['month']." ".$dat0['year'];
-if(!isset($_GET['calshow']) || $_GET['calshow']=="") {
-   $calshow=$dat0['month']." ".$dat0['year'];
+$datj = $dat0['month'] . ' ' . $dat0['year'];
+if (!isset($_GET['calshow']) || $_GET['calshow'] == '') {
+    $calshow = $dat0['month'] . ' ' . $dat0['year'];
 } else {
-  $calshow = $_GET['calshow'];
+    $calshow = $_GET['calshow'];
 }
-$dath=$calshow;
-$calshow="";
-$dat5="1 ".$dath;
+$dath = $calshow;
+$calshow = '';
+$dat5 = '1 ' . $dath;
 $dat1 = getdate(strtotime($dat5));
-$dat2 = getdate(strtotime($dat5." -1 month"));
-$datr=$dat2['month']." ".$dat2['year'];
-$dat3 = getdate(strtotime($dat5." +1 month"));
-$datv=$dat3['month']." ".$dat3['year'];
-$mn=array("0","Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember");
-$erster=$dat1['wday'];?>
+$dat2 = getdate(strtotime($dat5 . ' -1 month'));
+$datr = $dat2['month'] . ' ' . $dat2['year'];
+$dat3 = getdate(strtotime($dat5 . ' +1 month'));
+$datv = $dat3['month'] . ' ' . $dat3['year'];
+$mn = array('0', 'Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember');
+$erster = $dat1['wday'];
+?>
 <table class="caltab">
   <tr>
     <td align="center">
       <table class="caltab1" width=100%>
         <tr>
-          <td align="left"><a href="<?php echo $addi?>&amp;calshow=<?php echo $datr?>" title="zum vorigen Monat">&nbsp;&lt;&nbsp;</a></td>
-          <td align="center" class="caltz"><?php echo $mn[$dat1['mon']]." ".$dat1['year'];?></td>
-          <td align="right"><a href="<?php echo $addi?>" title="zum aktuellen Monat">&nbsp;#&nbsp;</a><a href="<?php echo $addi?>&amp;calshow=<?php echo $datv?>" title="zum nächsten Monat">&nbsp;&gt;&nbsp;</a></td>
+          <td align="left"><a href="<?php echo $addi ?>&amp;calshow=<?php echo $datr ?>" title="zum vorigen Monat">&nbsp;&lt;&nbsp;</a></td>
+          <td align="center" class="caltz"><?php echo $mn[$dat1['mon']] . ' ' . $dat1['year']; ?></td>
+          <td align="right"><a href="<?php echo $addi ?>" title="zum aktuellen Monat">&nbsp;#&nbsp;</a><a href="<?php echo $addi ?>&amp;calshow=<?php echo $datv ?>" title="zum nächsten Monat">&nbsp;&gt;&nbsp;</a></td>
         </tr>
       </table>
     </td>
@@ -106,43 +105,66 @@ $erster=$dat1['wday'];?>
           <td align="center" class="calwt">Fr</td>
           <td align="center" class="calwt">Sa</td>
           <td align="center" class="calwt">So</td>
-        </tr><?php 
-if($erster==0){$erster=7;}?>
-        <tr><?php 
-for($i=0;$i<$erster-1;$i++){?>
-          <td class="calat">&nbsp;</td><?php 
+        </tr><?php
+if ($erster == 0) {
+    $erster = 7;
 }
-for($i=1;$i<=31;$i++){
-  $dat4 = getdate(strtotime($i." ".$dath));
-  $heute=$dat4['wday'];
-  if($heute==0){$heute=7;}
-  if($dat1['mon']==$dat4['mon']){
-    $stil="calat";
-    $dum1=$dat0['mday'].".".$dat0['mon'].".".$dat0['year'];
-    $dum2=$dat4['mday'].".".$dat4['mon'].".".$dat4['year'];
-    if($dum1==$dum2){
-      if(($heute==6) || ($heute==7)){$stil="calhe";}else{$stil="calht";}
-      }
-      else{
-      if(($heute==6) || ($heute==7)){$stil="calwe";}else{$stil="calat";}
-    }
-    if ($i<=9){$k="0";}else{$k="";}
-    if($heute==1){?>
-          <tr><?php 
-    }?>
-            <td align="center" class="<?php echo $stil?>"><a href="#" onclick='lmogeben("<?php echo datefmt_format($fmt, strtotime($i." ".$dath))?>")' title="Datum übernehmen"><?php echo "$k$i"?></a></td><?php 
-    if($heute==7){?>
-          </tr><?php 
-      $j=$heute;
-    }
-  }
+?>
+        <tr><?php
+for ($i = 0; $i < $erster - 1; $i++) {
+    ?>
+          <td class="calat">&nbsp;</td><?php
 }
-if ($j!=7){
-  for ($i=0;$i<7-$j;$i++){?>
-            <td class="calat">&nbsp;</td><?php 
-  }?>
-          </tr><?php 
-}?>
+for ($i = 1; $i <= 31; $i++) {
+    $dat4 = getdate(strtotime($i . ' ' . $dath));
+    $heute = $dat4['wday'];
+    if ($heute == 0) {
+        $heute = 7;
+    }
+    if ($dat1['mon'] == $dat4['mon']) {
+        $stil = 'calat';
+        $dum1 = $dat0['mday'] . '.' . $dat0['mon'] . '.' . $dat0['year'];
+        $dum2 = $dat4['mday'] . '.' . $dat4['mon'] . '.' . $dat4['year'];
+        if ($dum1 == $dum2) {
+            if (($heute == 6) || ($heute == 7)) {
+                $stil = 'calhe';
+            } else {
+                $stil = 'calht';
+            }
+        } else {
+            if (($heute == 6) || ($heute == 7)) {
+                $stil = 'calwe';
+            } else {
+                $stil = 'calat';
+            }
+        }
+        if ($i <= 9) {
+            $k = '0';
+        } else {
+            $k = '';
+        }
+        if ($heute == 1) {
+?>
+          <tr><?php
+        }
+        ?>
+            <td align="center" class="<?php echo $stil ?>"><a href="#" onclick='lmogeben("<?php echo datefmt_format($fmt, strtotime($i . ' ' . $dath)) ?>")' title="Datum übernehmen"><?php echo "$k$i" ?></a></td><?php
+        if ($heute == 7) {
+?>
+          </tr><?php
+            $j = $heute;
+        }
+    }
+}
+if ($j != 7) {
+    for ($i = 0; $i < 7 - $j; $i++) {
+        ?>
+            <td class="calat">&nbsp;</td><?php
+    }
+    ?>
+          </tr><?php
+}
+?>
           </td>
         </tr>
       </table>

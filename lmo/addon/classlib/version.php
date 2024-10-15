@@ -1,6 +1,6 @@
 <?php
-require_once(__DIR__.'/../../init.php');
-require_once("ini.php");
+require_once (__DIR__ . '/../../init.php');
+require_once ('ini.php');
 $Path = PATH_TO_ADDONDIR;
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -13,7 +13,7 @@ $Path = PATH_TO_ADDONDIR;
   <table border= '0' cellspacing='0' align='center'>
     <tr>
       <td style='font-size=10pt;background-color=#EEEEEE;border-right-style:solid;border-left-style:solid;border-top-style:solid;border-bottom-style:solid;border-width:1px;border-color:#000000'; align='center'><B>Version Control</B><small><BR>
-      <?PHP echo CLASSLIB_VERSION;?></small></td>
+      <?PHP echo CLASSLIB_VERSION; ?></small></td>
       </td>
     </tr>
     <tr>
@@ -26,25 +26,25 @@ $Path = PATH_TO_ADDONDIR;
           <td width='30'>&nbsp</td>
           <td width='200'>Installed Version</td>
           <td width='30'>=</td>
-          <td width='300'><?PHP echo CLASSLIB_VERSION;?></td>
+          <td width='300'><?PHP echo CLASSLIB_VERSION; ?></td>
         </tr>
         <tr>
           <td>&nbsp</td>
           <td>Installed in</td>
           <td>=</td>
-          <td><small><?PHP echo $Path;?></small></td>
+          <td><small><?PHP echo $Path; ?></small></td>
         </tr>
         <tr>
           <td>&nbsp</td>
           <td>PHP</td>
           <td>=</td>
-          <td><?PHP echo phpversion();?></td>
+          <td><?PHP echo phpversion(); ?></td>
         </tr>
         <tr>
           <td>&nbsp</td>
           <td>LMO Version</td>
           <td>=</td>
-          <td>LigaManagerOnline <?php echo LMO_VERSION;?></td>
+          <td>LigaManagerOnline <?php echo LMO_VERSION; ?></td>
         </tr>
         <tr>
           <td colspan=4 style='font-size=10pt;background-color=#FFFFFF;border-bottom-style:solid;border-width:1px;border-color:#000000'>&nbsp;</td>
