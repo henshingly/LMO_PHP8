@@ -122,7 +122,7 @@ if ($newpage == 1) {
             echo getMessage($text['tipp'][70], TRUE);
         }
     } else {
-        $xtipperpass = substr(md5(uniqid(rand())), 0, rand(8, 16));
+        $xtipperpass = substr(md5(uniqid(rand())), 0, rand(10, 20));
     }
 
     if ($xtippervereinradio == 1) {
@@ -154,7 +154,7 @@ if ($newpage == 1) {
         $_SESSION['lmotipperverein'] = '';
     }
 
-    $zeile = $xtippernick . '|' . $xtipperpass . '|';
+    $zeile = $xtippernick . '|' . password_hash($xtipperpass, PASSWORD_BCRYPT) . '|';
     if ($tipp_freischaltung == 0) {
         $zeile .= '5|';
     } else {
@@ -268,7 +268,7 @@ if ($newpage != 1) {
        <div class="col-3"><input class="form-control" type="password" name="xtipperpass" size="25" maxlength="32" value="<?php echo $xtipperpass; ?>"></div>
      </div>
      <div class="row p-1">
-       <div class="col-2 text-end"><?php echo $text[308] . $text['tipp'][19]; ?></div>
+       <div class="col-2 text-end"><?php echo $text[308] . ' ' . $text['tipp'][19]; ?></div>
        <div class="col-3"><input class="form-control" type="password" name="xtipperpassw" size="25" maxlength="32" value="<?php echo $xtipperpassw; ?>"></div>
      </div><?php
     }

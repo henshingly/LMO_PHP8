@@ -24,7 +24,7 @@ $newpage = isset($_REQUEST['newpage']) ? 1 : 0;
 
 require_once (PATH_TO_ADDONDIR . '/tipp/lmo-tipptest.php');
 if (($action == 'tipp') && ($todo == 'pwchange')) {
-    $users = array('');
+    $users = array();
     $pswfile = PATH_TO_ADDONDIR . '/tipp/' . $tipp_tippauthtxt;
     $datei = fopen($pswfile, 'rb');
     while ($datei && !feof($datei)) {
@@ -62,7 +62,7 @@ if (($action == 'tipp') && ($todo == 'pwchange')) {
 
     if ($newpage == 1) {
         $xtipperpass = trim($xtipperpass);
-        if ($xtipperpass != $dummb[1]) {
+        if (!password_verify($xtipperpass, $dummb[1])) {
             $newpage = 0;
             echo getMessage($text['tipp'][42], TRUE);
         }
@@ -85,7 +85,7 @@ if (($action == 'tipp') && ($todo == 'pwchange')) {
     }
 
     if ($newpage == 1) {
-        $users[$save] = $dummb[0] . '|' . $xtipperpassneu . '|' . $dummb[2] . '|' . $dummb[3] . '|' . $dummb[4] . '|' . $dummb[5] . '|' . $dummb[6] . '|' . $dummb[7] . '|' . $dummb[8] . '|' . $dummb[9] . '|' . $dummb[10] . '|EOL';
+        $users[$save] = $dummb[0] . '|' . password_hash($xtipperpassneu, PASSWORD_BCRYPT) . '|' . $dummb[2] . '|' . $dummb[3] . '|' . $dummb[4] . '|' . $dummb[5] . '|' . $dummb[6] . '|' . $dummb[7] . '|' . $dummb[8] . '|' . $dummb[9] . '|' . $dummb[10] . '|EOL';
         require (PATH_TO_ADDONDIR . '/tipp/lmo-tippsaveauth.php');
     }  // end ($newpage==1)
 ?>

@@ -49,7 +49,7 @@ if ($action == 'tipp') {
                     if ($_SESSION['lmotippername'] == $fileinfo[0]) {
                         // Nick gefunden
                         $_SESSION['lmotipperok'] = -1;
-                        if ($_SESSION['lmotipperpass'] == $fileinfo[1]) {
+                        if (password_verify($_SESSION['lmotipperpass'], $fileinfo[1])) {
                             // Passwort richtig
                             $lmotippername = $_SESSION['lmotippername'];
                             $lmotipperverein = $fileinfo[5];

@@ -45,7 +45,7 @@ if ($message != '') {
             if ($dummb[9] != -1 && $dummb[4] != '') {
                 $textmessage = $message;
                 $textmessage = str_replace('[nick]', $dummb[0], $textmessage);
-                $textmessage = str_replace('[pass]', $dummb[1], $textmessage);
+                $textmessage = str_replace('[pass]', $xtipperpass, $textmessage);
                 $textmessage = str_replace('[name]', $dummb[3], $textmessage);
                 $mail->Body = iconv('UTF-8', 'ISO-8859-1', $textmessage);
                 $mail->addAddress($dummb[4]);

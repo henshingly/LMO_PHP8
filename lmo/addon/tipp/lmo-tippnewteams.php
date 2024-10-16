@@ -18,8 +18,8 @@
  * REMOVING OR CHANGING THE COPYRIGHT NOTICES IS NOT ALLOWED!
  */
 $dumma = array();
-$team = array('');
-$tipperteam = array('');
+$team = array();
+$tipperteam = array();
 $pswfile = PATH_TO_ADDONDIR . '/tipp/' . $tipp_tippauthtxt;
 
 $dumma = file($pswfile);

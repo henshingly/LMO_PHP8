@@ -59,6 +59,7 @@ if ($_SESSION['lmouserok'] == 2) {
             require (PATH_TO_ADDONDIR . '/tipp/lmo-tippsaveauth.php');
         }
     }
+    array_splice($users, 1, 1);
     include (PATH_TO_ADDONDIR . '/tipp/lmo-admintippmenu.php');
 ?>
   

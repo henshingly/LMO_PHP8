@@ -98,7 +98,7 @@ if ($action == 'admin' && $todo == 'tippuseredit' && ($nick != '' || $save == -1
 
     if ($newpage == 1) {
         $tipp_tipperdaten[0] = $nick;
-        $tipp_tipperdaten[1] = trim($xtipperpass) != '' ? $xtipperpass : $tipp_tipperdaten[1];
+        $tipp_tipperdaten[1] = trim($xtipperpass) != '' ? password_hash($xtipperpass, PASSWORD_BCRYPT) : $tipp_tipperdaten[1];
         $tipp_tipperdaten[3] = $xtippervorname;
         $tipp_tipperdaten[3] .= ' ' . $xtippernachname;
 
