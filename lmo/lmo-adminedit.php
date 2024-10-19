@@ -118,11 +118,7 @@ if ($file != '') {
                     $datu1 = explode('.', $dum1);
                     $datu2 = explode(':', $dum2);
                     $dummy = strtotime($datu1[0] . ' ' . $me[intval($datu1[1])] . ' ' . $datu1[2] . ' ' . $datu2[0] . ':' . $datu2[1]);
-                    if ($dummy > -1) {
-                        $mterm[$st - 1][$i] = $dummy;
-                    } else {
-                        $mterm[$st - 1][$i] = '';
-                    }
+                    $mterm[$st - 1][$i] = $dummy > -1 ? $dummy : '';
                 } else {
                     $mterm[$st - 1][$i] = '';
                 }
@@ -138,7 +134,9 @@ if ($file != '') {
                         $datu2 = explode(':', $dum2);
                         $dummy = strtotime($datu1[0] . ' ' . $me[intval($datu1[1])] . ' ' . $datu1[2] . ' ' . $datu2[0] . ':' . $datu2[1]);
                         $mterm[$st - 1][$i][$n] = $dummy > -1 ? $dummy : '';
-                    }
+					} else {
+                    $mterm[$st - 1][$i][$n] = '';
+                }
                 }
             }
             if ($_SESSION['lmouserok'] == 2 || $_SESSION['lmouserokerweitert'] == 1) {
