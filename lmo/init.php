@@ -26,14 +26,6 @@ foreach ($get as $value) {
     if (str_starts_with($value, '<'))
         die('XSS-Scripting detected');
 }
-include ('includes/kint.phar');
-
-$fp = fopen('access_log', 'a+');
-fwrite($fp, "\nAgent: " . $_SERVER['HTTP_USER_AGENT']);
-fwrite($fp, "\nURI: " . $_SERVER['REQUEST_URI']);
-fwrite($fp, "\nIP: " . $_SERVER['REMOTE_ADDR']);
-fwrite($fp, "\nDate: " . date('d.m.Y H:i:s', $_SERVER['REQUEST_TIME']));
-fclose($fp);
 
 /*
  * $content = "Date: ".date("d.m.y H:i:s")."\n";
