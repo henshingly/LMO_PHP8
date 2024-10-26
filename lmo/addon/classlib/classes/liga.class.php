@@ -538,7 +538,7 @@ class liga
                 // Parameter und werte trennen
                 preg_match_all('/^([^=\[]+)=(.*)/m', $sections[0][$y], $parameter, PREG_PATTERN_ORDER);
                 for ($i = 0, $partieNumber = 0; $i < count($parameter[0]); $i++) {
-                    if (strpos(strtolower($sections[1][$y]), 'round') === false || preg_match('/^D[12]$|^MO$/', trim($parameter[1][$i]))) {
+                    if (!str_contains(strtolower($sections[1][$y]), 'round') || preg_match('/^D[12]$|^MO$/', trim($parameter[1][$i]))) {
                         // andere Section oder SpieltagParameter
                         $iniData[$sections[1][$y]][trim($parameter[1][$i])] = trim($parameter[2][$i]);
                     } else {
@@ -615,7 +615,7 @@ class liga
                         $theim = $this->getIniData('GA', $iniData[$roundSektion][$pCounter], ++$partienNumber);
                         $tgast = $this->getIniData('GB', $iniData[$roundSektion][$pCounter], $partienNumber);
                         $notiz = $this->getIniData('NT', $iniData[$roundSektion][$pCounter], $partienNumber);
-                        $zeit = $this->getIniData('AT', $iniData[$roundSektion][$pCounter], $partienNumber);
+                        $zeit  = $this->getIniData('AT', $iniData[$roundSektion][$pCounter], $partienNumber);
 
                         if (!$spielNr = $this->getIniData('SpNr', $iniData[$roundSektion][$pCounter], $partienNumber)) {
                             $spielNr = strval($pCounter) . strval($partienNumber);

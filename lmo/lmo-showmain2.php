@@ -321,7 +321,7 @@ if ($file != '' && $nticker == 1) {
 // Tippspiel-Addon
 $output_tippspiel = '';
 if ($eintippspiel == 1) {
-    if (($tipp_immeralle == 1 || strpos($tipp_ligenzutippen, substr(basename($file), 0, -4)) !== FALSE)) {
+    if ($tipp_immeralle == 1 || str_contains($tipp_ligenzutippen, substr(basename($file), 0, -4))) {
         $output_tippspiel .= $action != 'tipp' ? "<li class='nav-item'><a href='{$addm}tipp' class='nav-link'>{$text['tipp'][0]}</a></li>" : "<li class='nav-item active pull-right'><a href='#' class='nav-link active'>{$text['tipp'][0]}</a></li>";
     }
 }

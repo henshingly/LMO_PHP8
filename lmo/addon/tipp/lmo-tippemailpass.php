@@ -46,7 +46,7 @@ if (isset($xtippername2)) {
 
     for ($i = 0; $i < count($dumma) && $_SESSION['lmotipperok'] == -5; $i++) {
         $dummb = explode('|', $dumma[$i]);
-        if ($xtippername2 == $dummb[0] || ($xtippername2 == $dummb[4] && strpos($dummb[4], '@') != false)) {
+        if ($xtippername2 == $dummb[0] || ($xtippername2 == $dummb[4] && str_contains($dummb[4], '@'))) {
             // User gefunden
             $_SESSION['lmotippername'] = $dummb[0];
             $_SESSION['lmotipperok'] = 0;
@@ -61,7 +61,7 @@ if (isset($xtippername2)) {
                 $mail->ClearAllRecipients();
                 $mail->ClearReplyTos();
             }
-            //Neues Passwort speichern
+            //Neues PAsswort speichern
             $dummb[1] = password_hash($xtipperpass, PASSWORD_BCRYPT);
             $users[$i] = $dummb[0] . '|' . $dummb[1] . '|' . $dummb[2] . '|' . $dummb[3] . '|' . $dummb[4] . '|' . $dummb[5] . '|' . $dummb[6] . '|' . $dummb[7] . '|' . $dummb[8] . '|' . $dummb[9] . '|' . $dummb[10] . '|EOL';
             require (PATH_TO_ADDONDIR . '/tipp/lmo-tippsaveauth.php');

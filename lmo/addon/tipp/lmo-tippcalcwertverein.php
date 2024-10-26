@@ -32,7 +32,7 @@ if (file_exists($auswertfile)) {
                 $sekt = trim(substr($zeile, 1, -1));
                 array_push($tippdaten, $sekt . '|||EOL');
                 $anzteams++;
-            } elseif ((strpos($zeile, '=') != false) && (substr($zeile, 0, 1) != ';')) {
+            } elseif ((str_contains($zeile, '=')) && (substr($zeile, 0, 1) != ';')) {
                 $schl = trim(substr($zeile, 0, strpos($zeile, '=')));
                 $wert = trim(substr($zeile, strpos($zeile, '=') + 1));
                 array_push($tippdaten, $sekt . '|' . $schl . '|' . $wert . '|EOL');

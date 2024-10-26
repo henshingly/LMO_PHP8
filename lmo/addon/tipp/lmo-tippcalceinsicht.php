@@ -48,7 +48,7 @@ if (!file_exists($einsichtfile)) {
                     array_push($tippdaten, $sekt . '|||EOL');
                     $anztipper++;
                 }
-            } elseif ((strpos($zeile, '=') != false) && (substr($zeile, 0, 1) != ';')) {
+            } elseif ((str_contains($zeile, '=')) && (substr($zeile, 0, 1) != ';')) {
                 $schl = trim(substr($zeile, 0, strpos($zeile, '=')));
                 $wert = trim(substr($zeile, strpos($zeile, '=') + 1));
                 if (!isset($jkwert)) {

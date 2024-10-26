@@ -68,7 +68,7 @@ if (substr($archivFolder, -1) != '/') {
     $archivFolder .= '/';
 }
 
-if (strpos($archivFolder, '../') !== false) {
+if (str_contains($archivFolder, '../')) {
     exit();
 }
 
