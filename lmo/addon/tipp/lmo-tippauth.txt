@@ -1,5 +1,0 @@
-Henshingly|qwertz|5| |schule@debabbisch.de|Jagdstubler||||1|1|EOL
-Polfruk|lmo|5| |dirk@babig.de|Nixnutze||||1|1|EOL
-Pepino|lmo|5| |webmaster@babig.it|Jagdstubler||||1|1|EOL
-test|test|5| |spam@babig.de|Nixnutze||||1|1|EOL
-test2|test2|5| |info@babig.de|Nixnutze||||1|1|EOL
