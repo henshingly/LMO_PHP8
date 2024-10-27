@@ -1,3 +1,8 @@
+[![version](https://img.shields.io/github/v/release/babbisch/lmo_php8)](https://github.com/babbisch/LMO_PHP8/releases) 
+[![commits](https://img.shields.io/github/commits-since/babbisch/lmo_php8/latest)](https://github.com/babbisch/LMO_PHP8/commits/main/) 
+[![issues](https://img.shields.io/github/issues/babbisch/lmo_php8)](https://github.com/babbisch/LMO_PHP8/issues)
+[![discussion](https://img.shields.io/github/discussions/babbisch/lmo_php8)](https://github.com/babbisch/LMO_PHP8/discussions)
+
 # LMO unter PHP 8 & Bootstrap
 Nachdem der LMO nicht mehr weiter entwickelt wird, PHP aber in neuen Versionen veröffentlich wird und einige Dinge nicht mehr funktionieren, hat <a target="_blank" href="//github.com/henshingly/LMO_PHP7">Henshingley</a> sich die Mühe gemacht den LMO für PHP 7.x zum Laufen zu bringen und die Sourcen auf GitHub veröffentlicht.
 
