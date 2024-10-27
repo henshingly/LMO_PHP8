@@ -8,7 +8,7 @@
   </div>
   <!-- BEGIN Spieltag -->
   <div class="row">
-    <div class="col"><a href="<!--AktSpieltagLink-->"><!--AktSpieltag--></div>
+    <div class="col"><a href="<!--AktSpieltagLink-->"><!--AktSpieltag--></a></div>
   </div>
   <!-- BEGIN Inhalt -->
   <div class="row">
@@ -18,7 +18,8 @@
 	<div class="col text-end"><acronym title="<!--HeimLang-->"><!--Heim--></acronym></div>
 	<div class="col"><!--Iconheim--></div>
 	<div class="col">&nbsp;-&nbsp;</div>
-	<div class="col text-start"><!--Icongast--></td><td align="left"><acronym title="<!--GastLang-->"><!--Gast--></acronym></div>
+	<div class="col text-start"><!--Icongast--></div>
+	<div class="col"><acronym title="<!--GastLang-->"><!--Gast--></acronym></div>
 	<div class="col"><!--Tore--></div>
 	<div class="col"><!--Tabellenlink--></div>
 	<div class="col"><!--Notiz--></div>
