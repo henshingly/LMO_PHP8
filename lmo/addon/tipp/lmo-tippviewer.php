@@ -438,12 +438,12 @@ if ($tipp_viewertipp == 1 && $viewermode == 1) {
                 echo $punktespiel;
             } else {
                 if ($punktespiel > 0) {
-                    echo "<img src='" . URL_TO_IMGDIR . "/right.gif' border='0' alt=''>";
+                    echo "<i class='bi bi-x-square-fill text-success'></i>";
                     if ($punktespiel > 1) {
                         echo '+' . ($punktespiel - 1);
                     }
                 } else {
-                    echo "<img src='" . URL_TO_IMGDIR . "/wrong.gif' border='0' alt=''>";
+                    echo "<i class='bi bi-check text-danger'></i>";
                 }
             }
         } ?>
