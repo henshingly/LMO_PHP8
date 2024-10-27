@@ -1,0 +1,5 @@
+﻿000=Toate rezultatele din ultima zi de meci
+001=.zi de meci
+002=-Decizia tribunalului sportiv
+003=Rezultatul conteaza în mod egal pentru ambele echipe din perspectiva echipei gazda.
+004=Niciun mesaj momentan

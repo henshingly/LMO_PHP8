@@ -1,0 +1,18 @@
+﻿000=[<acronym title='lmo-mininext pro LMO &copy; Tim Schumacher/LMO Group CLASSLIB_VERSION'>&copy;</acronym>]
+001=Další hra
+002=Poslední zápas sezóny
+003=Opravy
+004= Hrajte proti sobe:
+005=Chyba: Liga nenalezena!
+006=Upozornení: Archivní složka nebyla nalezena
+007=Predchozí hra
+008=Není vybrán žádný tým!
+009=V
+010=R
+011=P
+012=p
+013=d
+014= Stav
+015= dny
+016= Hodiny
+017= minuty

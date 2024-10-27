@@ -1,0 +1,5 @@
+﻿000=Vsi rezultati zadnjega dneva tekme
+001=.dan tekme
+002=-Odlocitev športnega sodišca
+003=Rezultat šteje enako za obe ekipi z vidika domace ekipe.
+004=Trenutno ni sporocil

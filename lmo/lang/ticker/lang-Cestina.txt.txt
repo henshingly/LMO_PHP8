@@ -1,0 +1,5 @@
+﻿000=Všechny výsledky z posledního dne zápasu
+001=.den zápasu
+002=-Rozhodnutí sportovního soudu
+003=Výsledek platí stejne pro oba týmy z pohledu domácího týmu.
+004=V tuto chvíli nejsou žádné zprávy

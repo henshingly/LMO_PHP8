@@ -1,0 +1,5 @@
+﻿000=Tutti i risultati dell'ultima giornata di partita
+001=.giorno della partita
+002=-Decisione del tribunale sportivo
+003=Il risultato conta allo stesso modo per entrambe le squadre dal punto di vista della squadra di casa.
+004=Nessun messaggio al momento

@@ -1,0 +1,5 @@
+﻿000=Todos os resultados do último dia de jogo
+001=.dia de jogo
+002=-Decisão do campo polidesportivo
+003=O resultado conta igualmente para ambas as equipas na perspetiva da equipa da casa.
+004=Nenhuma mensagem de momento

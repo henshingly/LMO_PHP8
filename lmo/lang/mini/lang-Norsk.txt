@@ -1,0 +1,18 @@
+﻿000=[<akronym title='lmo-mininext for LMO &copy; Tim Schumacher/LMO Group CLASSLIB_VERSION'>&copy;</acronym>]
+001=Neste kamp
+002=Sesongens siste kamp
+003=Fikseringer
+004=Spill mot hverandre:
+005=Feil: Liga ikke funnet!
+006=Advarsel: Arkivmappe ikke funnet
+007=Forrige spill
+008=Ingen lag valgt!
+009=S
+010=T
+011=N
+012=b
+013=h
+014=Status
+015=dager
+016=Timer
+017=minutter
