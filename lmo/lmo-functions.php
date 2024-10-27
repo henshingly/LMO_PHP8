@@ -123,12 +123,13 @@ function gewinn($gst, $gsp, $gmod, $m1, $m2)
                 $erg = 1;
             } elseif (($m1[0] + $m1[1]) < ($m2[0] + $m2[1])) {
                 $erg = 2;
-            } else {
+            /*} else {
                 if ($m2[1] > $m1[1]) {
                     $erg = 2;
                 } elseif ($m2[1] < $m1[1]) {
                     $erg = 1;
-                }
+                }*/
+                
             }
         }
     } else {
@@ -161,13 +162,11 @@ function getLangSelector()
         if (preg_match('/^lang-?(.*)?\.txt$/', $f, $lang) > 0) {
             if ($lang[1] == '')
                 return '';
-            if ($lang[1] != $_SESSION['lmouserlang']) {
-                $imgfile = URL_TO_IMGDIR . '/' . $lang[1] . '.gif';
-                $output_sprachauswahl .= "<a href='{$_SERVER['PHP_SELF']}?" . htmlentities(preg_replace('/&?lmouserlang=.+?\b/', '', $_SERVER['QUERY_STRING'])) . "&amp;lmouserlang={$lang[1]}' title='{$lang[1]}'><img src='{$imgfile}' border='1' title='{$lang[1]}' alt='{$lang[1]}'></a> ";
-            } else {
-                $imgfile = URL_TO_IMGDIR . '/' . $lang[1] . '.selected.gif';
-                $output_sprachauswahl .= "<img title='{$lang[1]}' src='{$imgfile}' border='1' alt='{$lang[1]}'> ";
-            }
+            $imgfile = URL_TO_IMGDIR . '/' . $lang[1] . '.svg';
+            if ($lang[1] == $_SESSION['lmouserlang']) //{
+                $border=2;
+            $output_sprachauswahl .= "<a href='{$_SERVER['PHP_SELF']}?" . htmlentities(preg_replace('/&?lmouserlang=.+?\b/', '', $_SERVER['QUERY_STRING'])) . "&amp;lmouserlang={$lang[1]}' title='{$lang[1]}'><img src='{$imgfile}' title='{$lang[1]}' border='$border' width='20' alt='{$lang[1]}'></a> ";
+            $border=0;
         }
     }
     closedir($handle);
