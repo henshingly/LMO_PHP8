@@ -298,19 +298,19 @@ if ($_SESSION['lmouserok'] == 2) {
     <div class="row align-items-center pb-1">
       <div class="col-1 offset-2 text-end"><input class="form-check-input" type="checkbox" name="heute_highlight" checked></div>
       <div class="col-3 text-start"><?php echo $text['viewer'][40]; ?></div>
-      <div class="col-2"><input class="form-control" type="text" name="spielberichtesymbol" value="bericht.gif" onChange="document.getElementById('spielberichtesymbol').src='<?php echo URL_TO_IMGDIR; ?>/viewer/'+this.value;"><img id="spielberichtesymbol" src="<?php echo URL_TO_IMGDIR; ?>/viewer/bericht.gif" alt=""></div>
+      <div class="col-2"><input class="form-control" type="text" name="spielberichtesymbol" value="bi bi-journal"></div>
       <div class="col-3 text-start"><?php echo $text['viewer'][23]; ?></div>
     </div>
     <div class="row align-items-center pb-1">
       <div class="col-1 offset-2 text-end"><input class="form-check-input" type="checkbox" name="spielberichte_neues_fenster"></div>
       <div class="col-3 text-start"><?php echo $text['viewer'][14]; ?></div>
-      <div class="col-2"><input class="form-control" type="text" name="tabellensymbol" value="tabelle.gif" onChange="document.getElementById('tabellensymbol').src='<?php echo URL_TO_IMGDIR; ?>/viewer/'+this.value;"><img id="tabellensymbol" src="<?php echo URL_TO_IMGDIR; ?>/viewer/tabelle.gif" alt=""></div>
+      <div class="col-2"><input class="form-control" type="text" name="tabellensymbol" value="bi bi-table"></div>
       <div class="col-3 text-start"><?php echo $text['viewer'][24]; ?></div>
     </div>
     <div class="row align-items-center input-group pb-1">
       <div class="col-1 offset-2 text-end"><input class="form-check-input" type="checkbox" name="tabelle_verlinken"></div>
       <div class="col-3 text-start"><?php echo $text['viewer'][13]; ?></div>
-      <div class="col-2"><input class="form-control" type="text" name="notizsymbol" value="notiz.gif" onChange="document.getElementById('notizsymbol').src='<?php echo URL_TO_IMGDIR; ?>/viewer/'+this.value;"><img id="notizsymbol" src="<?php echo URL_TO_IMGDIR; ?>/viewer/notiz.gif" alt=""></div>
+      <div class="col-2"><input class="form-control" type="text" name="notizsymbol" value="bi bi-sticky"></div>
       <div class="col-3 text-start"><?php echo $text['viewer'][25]; ?></div>
     </div>
     <div class="row align-items-center pb-1">

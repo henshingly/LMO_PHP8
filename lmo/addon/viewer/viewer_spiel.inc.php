@@ -96,17 +96,16 @@ foreach ($fav_team[$i] as $akt_team) {
 
         // Anfang Notitz
         if (trim($partie->notiz) != '') {
-            $icon = URL_TO_IMGDIR . '/viewer/' . $multi_cfgarray['notizsymbol'];
-            $ntext = '<a href="#" title="' . $partie->notiz . '" onclick="alert(\'' . $text[22] . ': ' . $partie->notiz . '\');window.focus();return false;"><img src="' . $icon . '" border="0" alt=""></a>';
+            $ntext = '<a href="#" title="' . $partie->notiz . '" onclick="alert(\'' . $text[22] . ': ' . $partie->notiz . '\');window.focus();return false;"><i class="' . $multi_cfgarray['notizsymbol'] . '"></i>';
             $template->setVariable('Notiz', $ntext);
         }  // Ende Notiz
 
         // Anfang Tabelle verlinken
         $table_link = URL_TO_LMO . '/lmo.php?file=' . $fav_liga[$i] . '&amp;action=table&amp;st=' . $spieltag;
         if ($multi_cfgarray['tabelle_verlinken'] == '1') {
-            $tlink = "<a href='" . $table_link . "' target='_blank' title='" . $text['viewer'][35] . ' (' . $text['viewer'][33] . ")'><img src='" . URL_TO_IMGDIR . '/viewer/' . $multi_cfgarray['tabellensymbol'] . "' border='0' alt='#'></a>";
+            $tlink = "<a href='" . $table_link . "' target='_blank' title='" . $text['viewer'][35] . ' (' . $text['viewer'][33] . ")'><i class='" . $multi_cfgarray['tabellensymbol'] . "'></i>";
         } else {
-            $tlink = "<a href='" . $table_link . "' title='" . $text['viewer'][35] . ' (' . $text['viewer'][34] . ")'><img src='" . URL_TO_IMGDIR . '/viewer/' . $multi_cfgarray['tabellensymbol'] . "' border='0' alt='#'></a>";
+            $tlink = "<a href='" . $table_link . "' title='" . $text['viewer'][35] . ' (' . $text['viewer'][34] . ")'><i class='" . $multi_cfgarray['tabellensymbol'] . "'></i>";
         }
         $template->setVariable('Tabellenlink', $tlink);
         // Ende Tabelle
@@ -122,9 +121,9 @@ foreach ($fav_team[$i] as $akt_team) {
         $SpBer_link = $partie->reportUrl;
         if ($SpBer_link != '') {
             if ($multi_cfgarray['spielberichte_neues_fenster'] == '1') {
-                $tlink = "<a href='" . $SpBer_link . "' target='_blank' title='" . $text['viewer'][38] . ' (' . $text['viewer'][33] . ")'><img src='" . URL_TO_IMGDIR . '/viewer/' . $multi_cfgarray['spielberichtesymbol'] . "' border='0' alt='�'></a>";
+                $tlink = "<a href='" . $SpBer_link . "' target='_blank' title='" . $text['viewer'][38] . ' (' . $text['viewer'][33] . ")'><i class='" . $multi_cfgarray['spielberichtesymbol'] . "'></i>";
             } else {
-                $tlink = "<a href='" . $SpBer_link . "' title='" . $text['viewer'][38] . ' (' . $text['viewer'][34] . ")'><img src='" . URL_TO_IMGDIR . '/viewer/' . $multi_cfgarray['spielberichtesymbol'] . "' border='0' alt='�'></a>";
+                $tlink = "<a href='" . $SpBer_link . "' title='" . $text['viewer'][38] . ' (' . $text['viewer'][34] . ")'><i class='" . $multi_cfgarray['spielberichtesymbol'] . "'></i>";
             }
             $template->setVariable('Spielbericht', $tlink);
         }  // Ende Spielbericht
