@@ -60,8 +60,8 @@ $_SESSION['userlang'] = isset($_GET['userlang']) ? $_GET['userlang'] : (isset($_
 $userlang = $_SESSION['userlang'];
 
 $filelist = array(
-    777 => array('ligen', 'output', 'config', 'ligen/dfb', 'config/viewer', 'addon/tipp/tipps', 'addon/tipp/tipps/auswert', 'addon/tipp/tipps/einsicht', 'addon/tipp/tipps/auswert/vereine', 'addon/spieler/stats'),
-    666 => array('config/cfg.txt', 'config/lmo-auth.php', 'config/tipp/cfg.txt', 'config/spieler/cfg.txt', 'config/ticker/cfg.txt', 'config/mini/cfg.txt', 'config/classlib/cfg.txt', 'addon/tipp/lmo-tippauth.txt', 'ligen/*.l98')
+    777 => array('ligen', 'output', 'config', 'config/viewer', 'addon/tipp/tipps', 'addon/tipp/tipps/auswert', 'addon/tipp/tipps/einsicht', 'addon/tipp/tipps/auswert/vereine', 'addon/spieler/stats'),
+    666 => array('config/cfg.txt', 'config/lmo-auth.php', 'config/tipp/cfg.txt', 'config/spieler/cfg.txt', 'config/ticker/cfg.txt', 'config/mini/cfg.txt', 'config/classlib/cfg.txt', 'addon/tipp/lmo-tipperauth.php', 'ligen/*.l98')
 );
 $lang = array(
     'DE' => array(
@@ -364,9 +364,9 @@ if ($lmo_install_step == 1) {
                             // Handle config files
                             if (str_contains($file, 'cfg.txt') || str_contains($file, 'auth')) {
                                 if (!file_exists($lmo_dir . '/' . $file)) {
-                                    if (str_contains($file, 'lmo-auth.php') && file_exists($lmo_dir . '/lmo-auth.txt')) {
+                                    if (str_contains($file, 'lmo-auth.php') && file_exists($lmo_dir . '/lmo-auth.php')) {
                                         // copy old auth-file into new one
-                                        $auth_old = file($lmo_dir . '/lmo-auth.txt');
+                                        $auth_old = file($lmo_dir . '/lmo-auth.php');
                                         $auth_file = fopen($lmo_dir . '/' . $file, 'wb');
                                         fwrite($auth_file, "<?php exit(); ?>\n");
                                         foreach ($auth_old as $old) {
@@ -717,10 +717,10 @@ if ($lmo_install_step == 4) {
         <a href="<?php echo $_SERVER['PHP_SELF']; ?>">Restart</a>
       </div>
       <div class="col-auto">
-        <a href="<?php echo $_SERVER['PHP_SELF']; ?>?userlang=FR"><img src="img/Francais.gif" alt="FR" width="16"></a>
-        <a href="<?php echo $_SERVER['PHP_SELF']; ?>?userlang=EN"><img src="img/English.gif" alt="EN" width="16"></a>
-        <a href="<?php echo $_SERVER['PHP_SELF']; ?>?userlang=ES"><img src="img/Espanol.gif" alt="ES" width="16"></a>
-        <a href="<?php echo $_SERVER['PHP_SELF']; ?>?userlang=DE"><img src="img/Deutsch.gif" alt="DE" width="16"></a>
+        <a href="<?php echo $_SERVER['PHP_SELF']; ?>?userlang=FR"><img src="img/Francais.svg" alt="FR" width="16"></a>
+        <a href="<?php echo $_SERVER['PHP_SELF']; ?>?userlang=EN"><img src="img/English.svg" alt="EN" width="16"></a>
+        <a href="<?php echo $_SERVER['PHP_SELF']; ?>?userlang=ES"><img src="img/Espanol.svg" alt="ES" width="16"></a>
+        <a href="<?php echo $_SERVER['PHP_SELF']; ?>?userlang=DE"><img src="img/Deutsch.svg" alt="DE" width="16"></a>
       </div>
         <div class="col-auto text-end">© René Marth/<a href="http://liga-manager-online.de/">LMO Group</a></div>
       </div>
