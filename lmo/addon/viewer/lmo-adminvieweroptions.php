@@ -108,9 +108,9 @@ if ($_SESSION['lmouserok'] == 2) {
         isset($_POST['template']) ? $config_array[15] = 'template=' . $_POST['template'] : $config_array[15] = 'template=standard';
         isset($_POST['uhrzeitformat']) ? $config_array[16] = 'uhrzeitformat=' . $_POST['uhrzeitformat'] : $config_array[16] = 'uhrzeitformat=%H:%M';
         isset($_POST['tordummy']) ? $config_array[17] = 'tordummy=' . $_POST['tordummy'] : $config_array[17] = 'tordummy=_';
-        isset($_POST['tabellensymbol']) ? $config_array[18] = 'tabellensymbol=' . $_POST['tabellensymbol'] : $config_array[18] = 'tabellensymbol=tabelle.gif';
-        isset($_POST['spielberichtesymbol']) ? $config_array[20] = 'spielberichtesymbol=' . $_POST['spielberichtesymbol'] : $config_array[20] = 'spielberichtesymbol=bericht.gif';
-        isset($_POST['notizsymbol']) ? $config_array[20] = 'notizsymbol=' . $_POST['notizsymbol'] : $config_array[20] = 'notizsymbol=notiz.gif';
+        isset($_POST['tabellensymbol']) ? $config_array[18] = 'tabellensymbol=' . $_POST['tabellensymbol'] : $config_array[18] = 'tabellensymbol=bi bi-journal';
+        isset($_POST['spielberichtesymbol']) ? $config_array[20] = 'spielberichtesymbol=' . $_POST['spielberichtesymbol'] : $config_array[20] = 'spielberichtesymbol=bi bi-table';
+        isset($_POST['notizsymbol']) ? $config_array[20] = 'notizsymbol=' . $_POST['notizsymbol'] : $config_array[20] = 'notizsymbol=bi bi-sticky';
         isset($_POST['spieltagtext']) ? $config_array[21] = 'spieltagtext=' . $_POST['spieltagtext'] : $config_array[21] = 'spieltagtext=';
         isset($_POST['cache_refresh']) ? $config_array[22] = 'cache_refresh=' . $_POST['cache_refresh'] : $config_array[22] = 'cache_refresh=';
         isset($_POST['favteam_highlight']) ? $config_array[23] = 'favteam_highlight=1' : $config_array[23] = 'favteam_highlight=';
