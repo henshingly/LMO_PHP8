@@ -635,7 +635,7 @@ function mark(el){
 						<div class="col-auto"><input type="checkbox" class="form-check-input" name="nullwerte_anzeigen" onClick="mark(this)" value="<?php echo $spieler_nullwerte_anzeigen ?>" <?php if ($spieler_nullwerte_anzeigen == 1) echo 'checked'; ?>></div>
 					</div>
 					<div class="row p-2">
-						<div class="col"><input class="btn btn-primary btn-sm" type="submit" value="Konfiguration speichern"></div>
+						<div class="col"><input class="btn btn-primary btn-sm" type="submit" value="<?php echo $text['spieler'][58] ?>"></div>
 					</div>
 				</div>
 			</form>
