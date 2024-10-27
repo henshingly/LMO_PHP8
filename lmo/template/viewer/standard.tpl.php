@@ -19,7 +19,7 @@
     <div class="col">
       <div class="container">
 	<!-- BEGIN Inhalt -->
-	<div class="row">
+	<div class="row <!--today-->">
 	  <div class="col-1"><!--Spieltag--></div>
 	  <div class="col-1"><!--Datum--></div>
           <div class="col-1"><!--Uhrzeit--></div>

@@ -131,9 +131,9 @@ foreach ($fav_team[$i] as $akt_team) {
         // Anfang Spiele Heute hervorheben
         if ($multi_cfgarray['heute_highlight'] == 1) {
             if ($partie->zeit > zeitberechnung('2', -1) && $partie->zeit < zeitberechnung('2', 0)) {
-                $template->setvariable('Zeilenklasse', 'vRowHighlight');
+                $template->setvariable('today', 'bg-secondary');
             } else {
-                $template->setvariable('Zeilenklasse', 'vRow');
+                $template->setvariable('today', '');
             }
         }  // Ende Sp.
     }

@@ -11,7 +11,7 @@
     <div class="col"><a href="<!--AktSpieltagLink-->"><!--AktSpieltag--></a></div>
   </div>
   <!-- BEGIN Inhalt -->
-  <div class="row">
+  <div class="row <!--today-->">
     <div class="col"><a href="<!--SpieltagLink-->"><!--Spieltag--></a></div>
 	<div class="col"><!--Datum--></div>
 	<div class="col"><!--Uhrzeit--></div>
