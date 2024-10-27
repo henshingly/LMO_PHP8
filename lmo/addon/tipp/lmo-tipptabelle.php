@@ -184,18 +184,18 @@ if ($file != '' && $tipp_tipptabelle1 == 1) {
         ?>
         <tr>
           <td> <?php echo $dummy . $x . $dumm2; ?> </td><?php
-        $y = 0;
+        $y = "arrow-right-circle";
         if (($endtab > 1) && ($tabtype == 0) && ($tabdat != '')) {
             if ($platz0[$i] < $platz1[$i]) {
-                $y = 1;
+                $y = "arrow-up-circle text-success";
             } else if ($platz0[$i] > $platz1[$i]) {
-                $y = 2;
+                $y = "arrow-down-circle text-danger";
             }
         }
         if ($tabdat != '') {
             echo '<td class="' . $lmo_tabelle_class . '"';
             if ($tabtype == 0) {
-                echo "><img src='" . URL_TO_IMGDIR . '/lmo-tab' . $y . '.gif\' width="9" height="9" border="0" alt=\'\'>';
+                echo "><i class='bi bi-' . $y . '></i>";
             } else {
                 echo ' width="2">';
             }
@@ -410,16 +410,16 @@ if ($tipp_wertverein == 1 && $tabtype == 0) {
         ?>
         <tr>
           <td><?php echo $dummy . $x . $dumm2; ?></td><?php
-        $y = 0;
+        $y = "arrow-right-circle";
         if (($endtab > 1) && ($tabdat != '') && $tipppunktegesamt[intval(substr($tab0[0], 25))] > 0) {
             if ($platz0[$i] < $platz1[$i]) {
-                $y = 1;
+                $y = "arrow-up-cirlce text-success";
             } else if ($platz0[$i] > $platz1[$i]) {
-                $y = 2;
+                $y = "arrow-down-circle text-danger";
             }
         }
         if ($tabdat != '') {
-            echo "<td><img src='" . URL_TO_IMGDIR . '/lmo-tab' . $y . '.gif\' width="9" height="9" border="0" alt=\'\'></td>';
+            echo "<td><i class='bi bi-' . $y . '></i>";
         } else {
             echo '<td></td>';
         }
