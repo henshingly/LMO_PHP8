@@ -156,6 +156,7 @@ function gewinn($gst, $gsp, $gmod, $m1, $m2)
 function getLangSelector()
 {
     $output_sprachauswahl = '';
+    $border = 0;
 
     $handle = opendir(PATH_TO_LANGDIR);
     while (false !== ($f = readdir($handle))) {
