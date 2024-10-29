@@ -46,7 +46,7 @@
 045=If You are not Registered:
 046=You can Register here for the Prediction Game
 047=Which Team would you like to Join?
-048=<acronym title="in Klammern: [Tipper im Team]">Join a current Team:</acronym>
+048=Join a current Team:
 049=Make New Team:
 050=None
 051=Please Select
@@ -172,12 +172,7 @@
 171=Days
 172=Prediction Table
 173=this is how the Table would look with your Predictions
-174=Hello [name]
-
-This mail is to remind you of your Predictions.
-So far we have no Predictions from you for the following Matches:
-
-[spiele]
+174=Hello [name],\n\nThis email is a reminder of your prediction.\nUnfortunately, we have not yet received any predictions from you for the following fixtures:\n\n[spiele]
 175=E-Mails sent
 176=E-Mail not sent<br>
 177=This Matchday cannot be Predicted
@@ -258,7 +253,7 @@ So far we have no Predictions from you for the following Matches:
 252=All Matches in the next
 253=Allow Predictions by Date
 254=...for Matches in the next
-255=[ <a href="http://www.vfb-forchheim.de/handball" target="_blank" title="Please Visit our Hompepagei">VfB Forchheim - Handball</a> ]
+255=
 256=Next Day
 257=Day Before
 258=All Matches from

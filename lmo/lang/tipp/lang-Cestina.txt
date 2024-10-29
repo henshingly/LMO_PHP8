@@ -172,7 +172,7 @@
 171=dnech
 172=Tabulka soutěže
 173=tady si můžete prohlédnout tabulku s vašimi tipy
-174=Ahoj [name]&#10;Tento mail je upozornění na další tipovací kolo.&#10;Nenatipoval jste [st].kolo:&#10;[spiele]&#10;Zde jsou vaše přihlašovací údaje:&#10;jméno: [nick]&#10;heslo: [pass]&#10;&#10;http://khfotbal.com/lmo/lmo.php?action=tipp
+174=174=Dobrý den [name],\n\nTento e-mail je připomínkou vaší předpovědi.\nBohužel jsme od vás zatím neobdrželi žádné předpovědi pro následující utkání:\n\n[spiele]
 175=Email(y) by(y) odeslán(y)
 176=Email nebyl odeslán
 177=Toto kolo nemůže být ještě natipováno
@@ -253,7 +253,7 @@
 252=Všechny zápasy v následujících
 253=Zadání tipů alá LMO-Viewer
 254=Zadání tipů alá LMO-Viewer pro zápasy v příštích
-255=[ <a href="http://www.vfb-forchheim.de/handball" target="_blank" title="Schau auch mal auf meiner Homepage vorbei">VfB Forchheim - Handball</a> ]
+255=
 256=dní dopředu
 257=dní zpět
 258=Všechny zápasy od

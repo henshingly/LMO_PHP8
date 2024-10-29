@@ -46,7 +46,7 @@
 045=Wenn Du noch nicht angemeldet bist:
 046=Hier kannst Du Dich für das Tippspiel
 047=Welchem Team möchtest Du angehören?
-048=<acronym title="in Klammern: [Tipper im Team]">in bestehendes Team eintreten:</acronym>
+048=in bestehendes Team eintreten:
 049=neues Team gründen:
 050=keinem
 051=Bitte auswählen

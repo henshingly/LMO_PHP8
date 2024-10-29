@@ -46,7 +46,7 @@
 045=Ce še niste prijavljeni:
 046=Tukaj se lahko prijavite za igro stav
 047=Kateri ekipi bi želeli pripadati?
-048=<acronym title="v oklepajih: [Tipper v ekipi]">pridruži se obstojeci ekipi:</acronym>
+048=pridruži se obstojeci ekipi:
 049=našel novo ekipo:
 050=ni
 051=Prosimo izberite
@@ -172,12 +172,12 @@
 171=dni
 172=Tabela nasvetov
 173=tako bi izgledala tabela z vašimi nasveti
-174=Pozdravljeni [name],\n\nTo e-poštno sporocilo je opomnik za vašo napoved.\nNa žalost od vas še nismo prejeli nobene napovedi za naslednje tekme:\n\n[igre]
+174=Pozdravljeni [name],\n\nTo e-poštno sporocilo je opomnik za vašo napoved.\nNa žalost od vas še nismo prejeli nobene napovedi za naslednje tekme:\n\n[spiele]
 175=E-poštna sporocila so bila poslana
 176=E-pošta ni bila poslana<br>
 177=Na ta dan tekme še ni mogoce staviti
 178=Nadomestni znak:
-179=[vzdevek] Vzdevek<br>[pass] Passwort<br>[ime] Ime<br>[igre] Seznam iger, ki jih je še treba vnesti (samo opomnik za namig)
+179=[vzdevek] Vzdevek<br>[pass] Passwort<br>[ime] Ime<br>[spiele] Seznam iger, ki jih je še treba vnesti (samo opomnik za namig)
 180=Posodobi skupno uvrstitev
 181=tako bi izgledala tabela z nasveti iz
 182=v tabelo z namigi

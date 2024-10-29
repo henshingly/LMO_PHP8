@@ -46,7 +46,7 @@
 045=Se non hai ancora effettuato l'accesso:
 046=Qui puoi iscriverti al gioco delle scommesse
 047=A quale squadra vorresti appartenere?
-048=<acronym title="tra parentesi: [Ribaltabile nel team]">unisciti al team esistente:</acronym>
+048=unisciti al team esistente:
 049=trovato una nuova squadra:
 050=nessuno
 051=Seleziona
@@ -172,12 +172,12 @@
 171=giorni
 172=Tabella mance
 173=questo è come apparirebbe la tabella con i tuoi suggerimenti
-174=Ciao [nome],\n\nQuesta email ti ricorda il tuo pronostico.\nPurtroppo non abbiamo ancora ricevuto alcun tuo pronostico per le seguenti partite:\n\n[giochi]
+174=Ciao [name],\n\nQuesta email ti ricorda il tuo pronostico.\nPurtroppo non abbiamo ancora ricevuto alcun tuo pronostico per le seguenti partite:\n\n[spiele]
 175=Le email sono state inviate
 176=L'e-mail non è stata inviata<br>
 177=Non è ancora possibile scommettere su questa giornata
 178=Carattere jolly:
-179=[nick] Nickname<br>[pass] Passaggiowort<br>[nome] Nome<br>[giochi] Elenco dei giochi ancora da digitare (solo promemoria suggerimento)
+179=[nick] Nickname<br>[pass] Passaggiowort<br>[name] Nome<br>[spiele] Elenco dei giochi ancora da digitare (solo promemoria suggerimento)
 180=Aggiorna classifica generale
 181=questo è l'aspetto della tabella con i suggerimenti di
 182=alla tabella delle mance

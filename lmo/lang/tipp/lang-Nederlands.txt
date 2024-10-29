@@ -46,7 +46,7 @@
 045=Als u nog niet geregistreerd bent:
 046=U kan zich hier registreren voor het Bingoal Game
 047=Van welk Team wil je lid worden?
-048=<acronym title="in Klammern: [Tipper im Team]">Wordt lid van een bestaand Team:</acronym>
+048=Wordt lid van een bestaand Team:
 049=Maak Nieuw Team aan:
 050=Geen
 051=Selecteer
@@ -172,7 +172,7 @@
 171=Dagen
 172=Voorspellings Tabel
 173=dit is hoe het klassement er zou uitzien met uw voorspellingen
-174=Hallo [naam]
+174=Hallo [naamé],\n\nDeze e-mail is een herinnering aan je voorspelling.\nHelaas hebben we nog geen voorspellingen van je ontvangen voor de volgende wedstrijden:\n\n[spiele]
 175=E-Mails verzonden
 176=E-Mail niet verzonden<br>
 177=Op deze Wedstrijddag kan je geen voorspelling uitvoeren
@@ -253,7 +253,7 @@
 252=Alle wedstrijden in de volgende
 253=Allow Predictions by Date
 254=...for Matches in the next
-255=[ <a href="http://www.vfb-forchheim.de/handball" target="_blank" title="Please Visit our Hompepagei">VfB Forchheim - Handball</a> ]
+255=
 256=Volgende Dag
 257=Vorige Dag
 258=Alle Wedstrijden van

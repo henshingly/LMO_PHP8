@@ -46,7 +46,7 @@
 045=Se ainda não está ligado:
 046=Aqui pode inscrever-se no jogo de apostas
 047=A que equipa gostaria de pertencer?
-048=<acronym title="entre parêntesis rectos: [Tipper na equipa]">juntar-se à equipa existente:</acronym>
+048=juntar-se à equipa existente:
 049=encontrou uma nova equipa:
 050=nenhum
 051=Por favor selecione
@@ -172,12 +172,12 @@
 171=dias
 172=Tabela de gorjetas
 173=é assim que ficaria a tabela com as suas dicas
-174=Olá [nome],\n\nEste e-mail é um lembrete do seu palpite. \nInfelizmente, ainda não recebemos nenhum palpite seu para os seguintes jogos:\n\n[jogos]
+174=Olá [name],\n\nEste e-mail é um lembrete do seu palpite. \nInfelizmente, ainda não recebemos nenhum palpite seu para os seguintes jogos:\n\n[spiele]
 175=E-mails foram enviados
 176=E-mail não foi enviado<br>
 177=Esta viagem ainda não pode ser apostada
 178=Cartão joker:
-179=[nickname] Alcunha<br>[pass] Passewort<br>[nome] Nome<br>[jogos] Lista de jogos ainda por digitar (apenas lembrete de dicas)
+179=[nickname] Alcunha<br>[pass] Passewort<br>[name] Nome<br>[spiele] Lista de jogos ainda por digitar (apenas lembrete de dicas)
 180=Atualizar classificação geral
 181=é assim que a mesa ficaria com as dicas de
 182=para a sua tabela de gorjetas

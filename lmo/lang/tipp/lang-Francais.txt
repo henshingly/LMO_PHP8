@@ -46,7 +46,7 @@
 045=Si vous n&#39;êtes pas encore inscrit:
 046=Pour le concours de pronostique, vous pouvez
 047=A quelle équipe voulez-vous appartenir?
-048=<acronym title="entre paranthèses: [Pronosticeur de l&#39;équipe]">s&#39;inscrire dans l&#39;équipe:</acronym>
+048=inscrire dans l&#39;équipe:
 049=créer une nouvelle équipe:
 050=aucune
 051=Veuillez choisir svp
@@ -172,7 +172,7 @@
 171=prochains jours
 172=Classement des pronostiques
 173=vue du classement avec mes pronostiques
-174=Salut [name]&#10;&#10;Petit rappel pour penser à poster rapidement tes pronostiques.&#10;Car nous n&#39;avons aucun pronostique de ta part pour les matchs suivants:&#10;&#10;[spiele]
+174=Salut [name],\n\nCet e-mail est un rappel de votre pronostic.\nMalheureusement, nous n'avons pas encore reçu de pronostics de votre part pour les matchs suivants :\n\n[spiele]
 175=Les emails ont été envoyés
 176=Les emails n&#39;ont pas été envoyés<br>
 177=Cette journée ne peut pas être pronostiquée.
@@ -253,7 +253,7 @@
 252=Tous les matchs des
 253=Permettre les pronostiques d&#39;après la date
 254=...pour les matchs dans les prochaines
-255=[ <a href="http://www.vfb-forchheim.de/handball" target="_blank" title="Jette un coup d&#39;oeil sur mon site web">VfB Forchheim - Handball</a> ]
+255=
 256=Jour suivant
 257=Jour précédent
 258=Tous les matchs de

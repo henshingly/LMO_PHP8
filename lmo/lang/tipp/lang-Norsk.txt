@@ -46,7 +46,7 @@
 045=Hvis du ennå ikke er registrert:
 046=Her kan du registrere deg for tippespillet:
 047=Hvilket Team vil du tilhøre?
-048=<acronym title="i paranteser: [Tipper i Team]">bli med i team:</acronym>
+048=bli med i team:
 049=lage nytt team:
 050=Inget
 051=Vennligst velg
@@ -172,7 +172,7 @@
 171=dager
 172=Tips tabell
 173=slik hadde tabellen sett ut med dine tips
-174=Hei [name]&#10;&#10;Denne mailen er en påminnelse om din tiping.&#10;Hittil har vi ikke mottatt noen tips for følgende kamper:&#10;&#10;[spiele]
+174=Hei [name],\n\nDenne e-posten er en påminnelse om spådommen din.\nDessverre har vi ikke mottatt noen spådommer fra deg for følgende kamper:\n\n[spiele]
 175=Emails ble sendt
 176=Email ble ikke sendt<br>
 177=Denne runden kan ikke tippes ennå
@@ -253,7 +253,7 @@
 252=Alle kamper de neste
 253=Tillate tipping etter dato
 254=...for kamper de neste
-255=[ <a href="http://www.vfb-forchheim.de/handball" target="_blank" title="Ta en titt på min hjemmeside">VfB Forchheim - Handball</a> ]
+255=
 256=dager fremover
 257=dager bakover
 258=Alle kamper fra

@@ -46,7 +46,7 @@
 045=Si no está Registrado:
 046=Puede registrarse aquí para el Juego de Predicción
 047=¿Qué equipo desea representar?
-048=<acronym title="en paréntesis: [Cerca del Equipo]">Represente a un equipo actual:</acronym>
+048=Represente a un equipo actual:
 049=Crear Nuevo Equipo:
 050=Nada
 051=Por favor seleccione
@@ -172,12 +172,7 @@
 171=Días
 172=Tabla de Predicción
 173=ésto es como se vería la tabla con sus predicciones
-174=Hola [name]
-Este correo es para recordarle sus predicciones.
-
-No tenemos hasta ahora ninguna predicción suya para los siguientes juegos:
-
-[spiele]
+174=Hola, [name],\n\nEste correo electrónico es un recordatorio de tu predicción.\nDesafortunadamente, todavía no hemos recibido ninguna predicción tuya para los siguientes partidos:\n\n[spiele]
 175=Emails enviados
 176=E-Mail no enviado<br>
 177=Esta jornada no puede ser predicha
@@ -258,7 +253,7 @@ No tenemos hasta ahora ninguna predicción suya para los siguientes juegos:
 252=All Matches in the next
 253=Allow Predictions by Date
 254=...for Matches in the next
-255=[ <a href="http://www.vfb-forchheim.de/handball" target="_blank" title="Por favor viste nuestra web">VfB Forchheim - Handball</a> ]
+255=
 256=Siguiente Día
 257=Día Anterior
 258=Todas las Jornadas desde

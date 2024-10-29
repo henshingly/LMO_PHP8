@@ -46,7 +46,7 @@
 045=Ha még nincs bejelentkezve:
 046=Itt regisztrálhat a fogadási játékra
 047=Melyik csapathoz szeretnél tartozni?
-048=<acronym title="zárójelben: [Tipper a csapatban]">csatlakozás a meglévo csapathoz:</acronym>
+048=csatlakozás a meglévo csapathoz:
 049=új csapatot talált:
 050=nincs
 051=Kérjük, válasszon
@@ -172,12 +172,12 @@
 171=nap
 172=Tipptábla
 173=így nézne ki a tippeket tartalmazó táblázat
-174=Kedves [név]!\n\nEz az e-mail emlékezteto a jóslatodra.\nSajnos még nem kaptunk jóslatokat a következo mérkozésekre vonatkozóan:\n\n[játékok]
+174=Kedves [name]!\n\nEz az e-mail emlékezteto a jóslatodra.\nSajnos még nem kaptunk jóslatokat a következo mérkozésekre vonatkozóan:\n\n[spiele]
 175=E-mailek elküldve
 176=Az e-mailt nem küldték el<br>
 177=Ezen a mérkozésnapon még nem lehet fogadni
 178=Jelentos karakter:
-179=[becenév] Becenév<br>[pass] Passwort<br>[név] Név<br>[játékok] A még begépelendo játékok listája (csak tippre emlékezteto)
+179=[becenév] Becenév<br>[pass] Passwort<br>[name] Név<br>[spiele] A még begépelendo játékok listája (csak tippre emlékezteto)
 180=Az összesített állás frissítése
 181=így nézne ki a táblázat a tippekkel
 182=a tipptáblázatodhoz
