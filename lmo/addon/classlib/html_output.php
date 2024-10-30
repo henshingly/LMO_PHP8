@@ -38,7 +38,7 @@ function HTML_icon($img_name, $img_type, $img_size = 'small', $html = '', $alter
 {
     $subFolder = '/' . $img_type . '/' . $img_size . '/';
     foreach (const_array(CLASSLIB_IMG_TYPES) as $extension) {
-        if ($imgHTML = findImage($img_name, $subFolder, $extension, $html, $alternative_text)) {
+        if ($imgHTML = findImage($img_name, $subFolder, $extension, $img_size, $html, $alternative_text)) {
             break;
         }
     }
@@ -149,13 +149,14 @@ function HTML_bigSpielerIcon($spieler, $htmlParameter = '', $alternative_text = 
  * @param string $alternative_text
  * @return string
  */
-function findImage($key, $path, $imgType, $htmlParameter = '', $alternative_text = '')
+function findImage($key, $path, $imgType, $imgSize, $htmlParameter = '', $alternative_text = '')
 {
-    // $key=str_replace("/","",isset($key));
     $key = str_replace('/', '', $key);
+	if($imgType == ".svg") {
+		$imgSize == "small" ? $htmlParameter .= ' width="24"' : $htmlParameter .= ' width="48"';
+	}
     if (!file_exists(PATH_TO_IMGDIR . $path . $key . $imgType)) {
         $key = preg_replace('/[^a-zA-Z0-9]/', '', $key);
-        // echo $key;
     } else {
         $imgdata = getimagesize(PATH_TO_IMGDIR . $path . $key . $imgType);
         $size = isset($imgdata[3]) ? $imgdata[3] : '';
@@ -164,7 +165,6 @@ function findImage($key, $path, $imgType, $htmlParameter = '', $alternative_text
 
     if (!file_exists(PATH_TO_IMGDIR . $path . $key . $imgType)) {
         $key = preg_replace('/[I(A)0-9]+$/', '', $key);
-        // echo $key;
     } else {
         $imgdata = getimagesize(PATH_TO_IMGDIR . $path . $key . $imgType);
         $size = isset($imgdata[3]) ? $imgdata[3] : '';
@@ -172,7 +172,6 @@ function findImage($key, $path, $imgType, $htmlParameter = '', $alternative_text
     }
 
     if (!file_exists(PATH_TO_IMGDIR . $path . $key . $imgType)) {
-        // return $alternative_text;
         return substr($alternative_text, 6, strrpos($alternative_text, "'") - 6);
     } else {
         $imgdata = getimagesize(PATH_TO_IMGDIR . $path . $key . $imgType);
