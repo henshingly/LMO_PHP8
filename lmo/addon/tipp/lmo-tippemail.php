@@ -29,6 +29,7 @@ if ($message != '') {
     $dumma = file($pswfile);
 
     $mail->isMail();
+    $mail->isHTML();
     $mail->Subject = $betreff;
     $mail->setFrom($aadr);
     $anzemail = 0;
@@ -62,7 +63,7 @@ if ($message != '') {
         }
         echo getMessage($anzemail . ' ' . $text['tipp'][175]);
     } elseif ($emailart == 1) {
-        $tipp_textreminder1 = str_replace(array("\r\n", "\n", "\r"), array('&#10;', '&#10;', '&#10;'), $message);
+        $tipp_textreminder1 = str_replace(array("\n", "\r"), array('<br />', '<br />'), $message);
         require (PATH_TO_LMO . '/lmo-savecfg.php');
         $now = strtotime('now');
         $then = strtotime('+' . $tage . ' day');

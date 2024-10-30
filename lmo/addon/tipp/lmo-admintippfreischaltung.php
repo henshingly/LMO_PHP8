@@ -21,9 +21,10 @@ require_once (PATH_TO_ADDONDIR . '/tipp/lmo-tipptest.php');
 require_once (PATH_TO_LMO . '/includes/PHPMailer.php');
 
 $mail = new PHPMailer(true);
-$tipp_mailtext = str_replace(array('\n', '[nick]', '[pass]', '[url]'), array("\n", $xtippernick, $xtipperpass, 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] . '?action=tipp&xtippername=' . $xtippernick . '&xtipperpass=' . $xtipperpass), $text['tipp'][298]);
+$tipp_mailtext = str_replace(array('\n', '[nick]', '[pass]', '[url]'), array('<br />', $xtippernick, $xtipperpass, 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] . '?action=tipp&xtippername=' . $xtippernick . '&xtipperpass=' . $xtipperpass), $text['tipp'][298]);
 
 $mail->isMail();
+$mail->isHTML();
 $mail->Subject = $text['tipp'][77];
 $mail->setFrom($aadr);
 

@@ -26,6 +26,7 @@ $action = isset($_GET['action']) ? $_GET['action'] : '';
 $todo = isset($_GET['todo']) ? $_GET['todo'] : '';
 $down = isset($_GET['down']) ? $_GET['down'] : 0;
 $madr = isset($_GET['madr']) ? $_GET['madr'] : '';
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 					"http://www.w3.org/TR/html4/loose.dtd">
@@ -47,6 +48,7 @@ if (($action == 'admin') && ($todo == 'email') && (($_SESSION['lmouserok'] == 1)
                 array_push($dummy, $files);
             }
         }
+        
         closedir($verz);
         sort($dummy);
         $temp = 'ligen.zip';
@@ -55,15 +57,16 @@ if (($action == 'admin') && ($todo == 'email') && (($_SESSION['lmouserok'] == 1)
             if ($dummy[$down - 1] != '' && check_hilfsadmin($dummy[$down - 1])) {
                 $zipfile = new ZipArchive;
                 $zipfile->open($temp, ZipArchive::CREATE);
-                $zipfile->addFile(PATH_TO_LMO . $dirliga . $dummy[$down - 1], $dummy[$down - 1]);
+                $zipfile->addFile(PATH_TO_LMO . '/' . $dirliga . $dummy[$down - 1], $dummy[$down - 1]);
                 $zipfile->close();
                 $mail = new PHPMailer(true);
                 $mail->CharSet = 'UTF-8';
                 $mail->isMail();
+                $mail->isHTML();
                 $mail->setFrom($aadr);
                 $mail->addAddress($madr);
                 $mail->Subject = $text[341];
-                $mail->Body = $text[342];
+                $mail->Body = str_replace('\n', '<br />', $text[342]);
                 $mail->addAttachment($temp, $dummy[$down - 1] . '.zip');
                 if ($mail->send()) {
                     echo getMessage($text[348]);
@@ -116,7 +119,7 @@ if (($action == 'admin') && ($todo == 'email') && (($_SESSION['lmouserok'] == 1)
     <input type="hidden" name="action" value="admin">
     <input type="hidden" name="todo" value="email">
     <input type="hidden" name="down" value="<?php echo $down ?>">
-    <input type="submit" class="btn btn-sm" value="Senden">
+    <input type="submit" value="Senden">
   </form>
   <p><script type="text/javascript">document.write('<a href="#" onclick="self.close();"><?php echo $text[347] ?><\/a>');</script></p><?php
     }

@@ -41,6 +41,7 @@ if (isset($xtippername2)) {
 
     $dumma = file($pswfile);
     $mail->isMail();
+    $mail->isHTML();
     $mail->Subject = $text['tipp'][79];
     $mail->setFrom($aadr);
 
@@ -50,7 +51,7 @@ if (isset($xtippername2)) {
             // User gefunden
             $_SESSION['lmotippername'] = $dummb[0];
             $_SESSION['lmotipperok'] = 0;
-            $emailbody = 'Hallo ' . $dummb[0] . "\n\n" . $text['tipp'][77] . "\n" . $text['tipp'][23] . ': ' . $dummb[0] . "\n" . $text[308] . ': ' . $xtipperpass;
+            $emailbody = 'Hallo ' . $dummb[0] . '<br /><br />' . $text['tipp'][77] . '<br />' . $text['tipp'][23] . ': ' . $dummb[0] . '<br />' . $text[308] . ': ' . $xtipperpass;
             $mail->Body = iconv('UTF-8', ' ISO-8859-1', $emailbody);
             $mail->addAddress($dummb[4]);
             if ($mail->send()) {
