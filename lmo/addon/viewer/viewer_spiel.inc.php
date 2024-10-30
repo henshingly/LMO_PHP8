@@ -41,10 +41,10 @@ foreach ($fav_team[$i] as $akt_team) {
         // TeamIcons
         $Heim = $partie->heim->name;
         $Gast = $partie->gast->name;
-        $template->setVariable('Iconheim', HTML_smallTeamIcon($Heim, " width='24' title='" . $myPartie->heim->mittel . "' alt='" . $myPartie->heim->kurz . "'"));
-        $template->setVariable('Icongast', HTML_smallTeamIcon($Gast, " width='24' title='" . $myPartie->gast->mittel . "' alt='" . $myPartie->gast->kurz . "'"));
-        $template->setVariable('IconBigheim', HTML_bigTeamIcon($Heim, " width='48' title='" . $myPartie->heim->mittel . "' alt='" . $myPartie->heim->kurz . "'"));
-        $template->setVariable('IconBiggast', HTML_bigTeamIcon($Gast, " width='48' title='" . $myPartie->gast->mittel . "' alt='" . $myPartie->gast->kurz . "'"));
+        $template->setVariable('Iconheim', HTML_smallTeamIcon($Heim, " title='" . $myPartie->heim->mittel . "' alt='" . $myPartie->heim->kurz . "'"));
+        $template->setVariable('Icongast', HTML_smallTeamIcon($Gast, " title='" . $myPartie->gast->mittel . "' alt='" . $myPartie->gast->kurz . "'"));
+        $template->setVariable('IconBigheim', HTML_bigTeamIcon($Heim, " title='" . $myPartie->heim->mittel . "' alt='" . $myPartie->heim->kurz . "'"));
+        $template->setVariable('IconBiggast', HTML_bigTeamIcon($Gast, " title='" . $myPartie->gast->mittel . "' alt='" . $myPartie->gast->kurz . "'"));
         // Ende TeamIcons
 
         $mhp_link_s = '';

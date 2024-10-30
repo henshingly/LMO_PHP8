@@ -293,7 +293,7 @@ if ($file != '' && ($_SESSION['lmouserok'] == 2 || $_SESSION['lmouserokerweitert
         }
         /** Mannschaftswappen */
         ?>
-            <div class="col-1"><?php echo HTML_smallTeamIcon($file, $teams[$i], " width='24' title='$teams[$i]'", " alt='$teams[$i]'"); ?></div>
+            <div class="col-1"><?php echo HTML_smallTeamIcon($file, $teams[$i], " title='$teams[$i]'", " alt='$teams[$i]'"); ?></div>
           </div>
 <?php
     }

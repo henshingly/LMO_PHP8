@@ -85,7 +85,7 @@ foreach ($datsort as $key => $val) {
     <div class="col-3 text-end d-none d-lg-block">
     <?php
         echo $heim1 . $teams[$teama[$st - 1][$i]] . $heim2;
-        echo '&nbsp;' . HTML_smallTeamIcon($file, $teams[$teama[$st - 1][$i]], " width='24' style='vertical-align: middle;' title='" . $teams[$teama[$st - 1][$i]] . "'");
+        echo '&nbsp;' . HTML_smallTeamIcon($file, $teams[$teama[$st - 1][$i]], " style='vertical-align: middle;' title='" . $teams[$teama[$st - 1][$i]] . "'");
     ?>
     </div>
     <div class="col-3 text-end d-lg-none">
@@ -112,7 +112,7 @@ foreach ($datsort as $key => $val) {
         echo HTML_smallTeamIcon(
             $file,
             $teams[$teamb[$st - 1][$i]],
-            " width='24' style='vertical-align: middle;' title='" . $teams[$teamb[$st - 1][$i]] . "'",
+            " style='vertical-align: middle;' title='" . $teams[$teamb[$st - 1][$i]] . "'",
         ) . '&nbsp;';
         echo $gast1 . $teams[$teamb[$st - 1][$i]] . $gast2;
     ?>
@@ -134,8 +134,8 @@ foreach ($datsort as $key => $val) {
         $lmo_teamaicon = '';
         $lmo_teambicon = '';
         if ($urlb == 1 || $mnote[$st - 1][$i] != '' || $msieg[$st - 1][$i] > 0) {
-            $lmo_teamaicon = HTML_smallTeamIcon($file, $teams[$teama[$st - 1][$i]], " width='24' style='vertical-align: middle;' title='" . $teams[$teama[$st - 1][$i]] . "'");
-            $lmo_teambicon = HTML_smallTeamIcon($file, $teams[$teamb[$st - 1][$i]], " width='24' style='vertical-align: middle;' title='" . $teams[$teamb[$st - 1][$i]] . "'");
+            $lmo_teamaicon = HTML_smallTeamIcon($file, $teams[$teama[$st - 1][$i]], " style='vertical-align: middle;' title='" . $teams[$teama[$st - 1][$i]] . "'");
+            $lmo_teambicon = HTML_smallTeamIcon($file, $teams[$teamb[$st - 1][$i]], " style='vertical-align: middle;' title='" . $teams[$teamb[$st - 1][$i]] . "'");
         }
         /** Spielbericht verlinken */
         if ($urlb == 1) {
@@ -219,7 +219,7 @@ if ($einspielfrei == 1) {
             if ($plan == '1') {
                 echo '</a>';
             }
-            echo '&nbsp;' . HTML_smallTeamIcon($file, $teams[$hoy8], " width='24' style='vertical-align: middle;' title='$teams[$hoy8]'");
+            echo '&nbsp;' . HTML_smallTeamIcon($file, $teams[$hoy8], " style='vertical-align: middle;' title='$teams[$hoy8]'");
         }
     }
 ?></div> 

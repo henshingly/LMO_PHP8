@@ -136,7 +136,7 @@ if (isset($_SESSION['liga_sort_direction']) && $_SESSION['liga_sort_direction'] 
 	</div>
 <?php foreach ($ligadatei as $liga) { ?>
 	<div class="row">
-		<div class="col-4 offset-1 text-start d-none d-lg-block"><a href="<?php echo $addi . $subdir . $liga['file_name'] . '&amp;st=' . $liga['aktueller_spieltag'] ?>"><?php echo HTML_smallLigaIcon($liga['icon'], "alt='' width='24'", ''); ?><?php echo $liga['liga_name'] ?></a></div>
+		<div class="col-4 offset-1 text-start d-none d-lg-block"><a href="<?php echo $addi . $subdir . $liga['file_name'] . '&amp;st=' . $liga['aktueller_spieltag'] ?>"><?php echo HTML_smallLigaIcon($liga['icon'], " title='" . $liga['liga_name'] . "'"); ?><?php echo $liga['liga_name'] ?></a></div>
 		<div class="col text-start d-lg-none"><a href="<?php echo $addi . $subdir . $liga['file_name'] . '&amp;st=' . $liga['aktueller_spieltag'] ?>"><?php echo $liga['liga_name'] ?></a></div>
 		<?php
         if (isset($_SESSION['lmouserok']) && $_SESSION['lmouserok'] > 0) {

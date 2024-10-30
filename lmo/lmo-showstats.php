@@ -40,11 +40,11 @@ if ($file != '') {
             ?>
             <p>
               <a href="<?php echo $adds . $i ?>&amp;stat2=<?php echo $show_stat2 ?>" data-bs-toggle='tooltip' data-bs-placement='top' data-bs-html='true' title="<?php echo $text[57] . '<br>' . $teams[$i] ?>">
-                    <?php echo HTML_smallTeamIcon($file, $teams[$i], " style='vertical-align: middle;' width='24' title='$teams[$i]'", " alt='$teamk[$i]'"); ?>
+                    <?php echo HTML_smallTeamIcon($file, $teams[$i], " style='vertical-align: middle;' title='$teams[$i]'", " alt='$teamk[$i]'"); ?>
               </a>
             </p><?php
         } else {
-            echo '<p>' . HTML_smallTeamIcon($file, $teams[$show_stat1], " style='vertical-align: middle;' width='24' title='$teams[$show_stat1]'", " alt='$teamk[$show_stat1]'") . '</p>';
+            echo '<p>' . HTML_smallTeamIcon($file, $teams[$show_stat1], " style='vertical-align: middle;' title='$teams[$show_stat1]'", " alt='$teamk[$show_stat1]'") . '</p>';
         }
     }
     ?>
@@ -68,9 +68,9 @@ if ($file != '') {
         <div class="row">
           <div class="col-3 offset-2 text-end"><strong><?php echo $teams[$show_stat1]; ?></strong></div>
           <div class="col-4 text-center"><?php
-        echo HTML_smallTeamIcon($file, $teams[$show_stat1], " style='vertical-align: middle;' width='24' title='$teams[$show_stat1]'", " alt='$teamk[$show_stat1]'") . '&nbsp;';
+        echo HTML_smallTeamIcon($file, $teams[$show_stat1], " style='vertical-align: middle;' title='$teams[$show_stat1]'", " alt='$teamk[$show_stat1]'") . '&nbsp;';
         if ($show_stat2 > 0 && $show_stat1 != $show_stat2) {
-            echo '&nbsp;' . HTML_smallTeamIcon($file, $teams[$show_stat2], " style='vertical-align: middle;' width='24' title='$teams[$show_stat2]'", " alt='$teamk[$show_stat2]'");
+            echo '&nbsp;' . HTML_smallTeamIcon($file, $teams[$show_stat2], " style='vertical-align: middle;' title='$teams[$show_stat2]'", " alt='$teamk[$show_stat2]'");
         }
         ?>
           </div><?php
@@ -202,11 +202,11 @@ if ($file != '') {
             if ($i != $show_stat2) {
 ?><p>
                    <a href="<?php echo $adds . $show_stat1 ?>&amp;stat2=<?php echo $i ?>" data-bs-toggle='tooltip' data-bs-placement='top' data-bs-html='true' title="<?php echo $text[58] . '<br>' . $teams[$i] ?>">
-                       <?php echo HTML_smallTeamIcon($file, $teams[$i], " style='vertical-align: middle;' width='24' alt='$teams[$i]'", " alt='$teamk[$i]'") ?>
+                       <?php echo HTML_smallTeamIcon($file, $teams[$i], " style='vertical-align: middle;' alt='$teams[$i]'", " alt='$teamk[$i]'") ?>
                    </a>
                  </p><?php
             } else {
-                echo '<p>' . HTML_smallTeamIcon($file, $teams[$i], " style='vertical-align: middle;' width='24' title='$teams[$i]'", " alt='$teamk[$i]'") . '</p>';
+                echo '<p>' . HTML_smallTeamIcon($file, $teams[$i], " style='vertical-align: middle;' title='$teams[$i]'", " alt='$teamk[$i]'") . '</p>';
             }
         }
 ?>

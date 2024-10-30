@@ -37,11 +37,11 @@ if ($file != '') {
             ?>
             <p>
                 <a href="<?php echo $addp . $i ?>" data-bs-toggle='tooltip' data-bs-placement='top' title="<?php echo $teams[$i] ?>">
-                    <?php echo HTML_smallTeamIcon($file, $teams[$i], " width='24' style='vertical-align: middle;' title='$teams[$i]'", " alt='" . $teamk[$i] . "'"); ?>
+                    <?php echo HTML_smallTeamIcon($file, $teams[$i], " style='vertical-align: middle;' title='$teams[$i]'", " alt='" . $teamk[$i] . "'"); ?>
                 </a>
             </p><?php
         } else {
-            echo '<p>' . HTML_smallTeamIcon($file, $teams[$i], " width='24' style='vertical-align: middle;' title='$teams[$i]'", " alt='" . $teamk[$i] . "'") . '</p>';
+            echo '<p>' . HTML_smallTeamIcon($file, $teams[$i], " style='vertical-align: middle;' title='$teams[$i]'", " alt='" . $teamk[$i] . "'") . '</p>';
         }
     }
     ?>
@@ -74,7 +74,6 @@ if ($file != '') {
                     if ($selteam == $teama[$j][$i]) {
                         $heim1 = '<strong>';
                     }
-                    // echo $teams[$teama[$j][$i]];
                     if ($selteam == $teama[$j][$i]) {
                         $heim2 = '</strong>';
                     }
@@ -82,13 +81,13 @@ if ($file != '') {
           <div class="col-3 text-end d-none d-lg-block">
           <?php
                     echo $heim1 . $teams[$teama[$j][$i]] . $heim2;
-                    // echo HTML_smallTeamIcon($file,$teams[$teama[$j][$i]]," style='vertical-align: middle;'"," alt='' width='24'")."&nbsp;";
+                    // echo HTML_smallTeamIcon($file,$teams[$teama[$j][$i]]," style='vertical-align: middle;'"," alt=''")."&nbsp;";
 ?>
           </div>
           <div class="col-3 text-end d-lg-none">
           <?php
                     echo $heim1 . $teamk[$teama[$j][$i]] . $heim2;
-                    // echo HTML_smallTeamIcon($file,$teams[$teama[$j][$i]]," style='vertical-align: middle;'"," alt='' width='24'")."&nbsp;";
+                    // echo HTML_smallTeamIcon($file,$teams[$teama[$j][$i]]," style='vertical-align: middle;'"," alt=''")."&nbsp;";
 ?>
           </div>
           <?php
@@ -104,13 +103,13 @@ if ($file != '') {
           <div class="col-3 text-start d-none d-lg-block"> -&nbsp;&nbsp;
           <?php
                     echo $gast1 . $teams[$teamb[$j][$i]] . $gast2;
-                    // echo HTML_smallTeamIcon($file,$teams[$teamb[$j][$i]]," style='vertical-align: middle;'"," alt='' width='24'")."&nbsp;";
+                    // echo HTML_smallTeamIcon($file,$teams[$teamb[$j][$i]]," style='vertical-align: middle;'"," alt=''")."&nbsp;";
 ?>
           </div>
           <div class="col-3 text-start d-lg-none"> -&nbsp;&nbsp; 
           <?php
                     echo $gast1 . $teamk[$teamb[$j][$i]] . $gast2;
-                    // echo HTML_smallTeamIcon($file,$teams[$teamb[$j][$i]]," style='vertical-align: middle;'"," alt='' width='24'")."&nbsp;";
+                    // echo HTML_smallTeamIcon($file,$teams[$teamb[$j][$i]]," style='vertical-align: middle;'"," alt=''")."&nbsp;";
 ?>
           </div>
           <div class="col-1 col-sm-auto"><?php echo applyFactor($goala[$j][$i], $goalfaktor); ?> : <?php echo applyFactor($goalb[$j][$i], $goalfaktor); ?></div><?php
@@ -124,8 +123,8 @@ if ($file != '') {
                     $lmo_teamaicon = '';
                     $lmo_teambicon = '';
                     if ($urlb == 1 || $mnote[$j][$i] != '' || $msieg[$j][$i] > 0) {
-                        $lmo_teamaicon = HTML_smallTeamIcon($file, $teams[$teama[$j][$i]], " width='24' style='vertical-align: middle;' title='" . $teams[$teama[$j][$i]] . "'");
-                        $lmo_teambicon = HTML_smallTeamIcon($file, $teams[$teamb[$j][$i]], " width='24' style='vertical-align: middle;' title='" . $teams[$teamb[$j][$i]] . "'");
+                        $lmo_teamaicon = HTML_smallTeamIcon($file, $teams[$teama[$j][$i]], " style='vertical-align: middle;' title='" . $teams[$teama[$j][$i]] . "'");
+                        $lmo_teambicon = HTML_smallTeamIcon($file, $teams[$teamb[$j][$i]], " style='vertical-align: middle;' title='" . $teams[$teamb[$j][$i]] . "'");
                     }
                     /** Spielbericht verlinken */
                     if ($urlb == 1) {
