@@ -104,8 +104,8 @@ function getMessage($message, $error = FALSE)
  * @param        string     $gst
  * @param        string     $gsp
  * @param        string     $gmod	modus (0->regular / 1-> KO / 2->KO with 2 games / 3->best of 3 / 5->best of 5 / 7->best of 7)
- * @param        array		$m1		results of home team
- * @param        array		$m2		results of away team
+ * @param        array	    $m1		results of home team
+ * @param        array	    $m2		results of away team
  * @return       int        $erg	winner(home / away)
  */
 function gewinn($gst, $gsp, $gmod, $m1, $m2)
@@ -123,13 +123,12 @@ function gewinn($gst, $gsp, $gmod, $m1, $m2)
                 $erg = 1;
             } elseif (($m1[0] + $m1[1]) < ($m2[0] + $m2[1])) {
                 $erg = 2;
-            /*} else {
+            } else {
                 if ($m2[1] > $m1[1]) {
                     $erg = 2;
                 } elseif ($m2[1] < $m1[1]) {
                     $erg = 1;
-                }*/
-                
+                }
             }
         }
     } else {
