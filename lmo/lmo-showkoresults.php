@@ -66,7 +66,6 @@ if ($file != '') {
     $datsort = $mterm[$st - 1];
     asort($datsort);
     reset($datsort);
-    // while (list ($key, $val) = each ($datsort)) { //Deprecated: The each() function ...
     foreach ($datsort as $key => $val) {
         $i = $key;
         $heim1 = $heim2 = $gast1 = $gast2 = '';
@@ -80,7 +79,6 @@ if ($file != '') {
                 }
                 if ($datm == 1) {
                     if ($mterm[$st - 1][$i][$n] > 0) {
-                        // $dum1 = date($datf, $mterm[$st-1][$i][$n]);
                         $dum1 = datefmt_format($fmt, $mterm[$st - 1][$i][$n]);
                         $dum2 = date('d.m', $mterm[$st - 1][$i][$n]);
                     } else {
@@ -114,12 +112,16 @@ if ($file != '') {
                         $heim2 .= '</a>';
                     }
 ?>
-          <div class="col-3 text-end d-none d-lg-block <?php echo $color; ?>"><?php
+          <div class="col-3 text-end d-none d-xl-block <?php echo $color; ?>"><?php
                     echo $heim1 . $teams[$teama[$st - 1][$i]] . $heim2;
                     echo '&nbsp;' . HTML_smallTeamIcon($file, $teams[$teama[$st - 1][$i]], " title='" . $teams[$teama[$st - 1][$i]] . "'") . '&nbsp;';
 ?>
           </div>
-          <div class="col-2 text-end d-lg-none <?php echo $color; ?>"><?php
+          <div class="col-3 text-end d-none d-md-block d-lg-block d-xl-none <?php echo $color; ?>"><?php
+                    echo $heim1 . $teamm[$teama[$st - 1][$i]] . $heim2;
+?>
+          </div>
+          <div class="col-2 text-end d-md-none <?php echo $color; ?>"><?php
                     echo $heim1 . $teamk[$teama[$st - 1][$i]] . $heim2;
 ?>
           </div>
@@ -144,19 +146,24 @@ if ($file != '') {
                         $gast2 .= '</a>';
                     }
 ?>
-          <div class="col-3 text-start d-none d-lg-block <?php echo $color; ?>"><?php
+          <div class="col-3 text-start d-none d-xl-block <?php echo $color; ?>"><?php
                     echo '&nbsp;' . HTML_smallTeamIcon($file, $teams[$teamb[$st - 1][$i]], " title='" . $teams[$teamb[$st - 1][$i]] . "'") . '&nbsp;';
                     echo $gast1 . $teams[$teamb[$st - 1][$i]] . $gast2;
 ?>
           </div>
-          <div class="col-2 text-start d-lg-none <?php echo $color; ?>"><?php
+
+          <div class="col-3 text-start d-none d-md-block d-lg-block d-xl-none <?php echo $color; ?>"><?php
+                    echo $gast1 . $teamm[$teamb[$st - 1][$i]] . $gast2;
+?>
+          </div>
+          <div class="col-2 text-start d-md-none <?php echo $color; ?>"><?php
                     echo $gast1 . $teamk[$teamb[$st - 1][$i]] . $gast2;
 ?>
           </div><?php
                 } else {
 ?>
-          <div class="col-6 d-none d-lg-block"></div>
-          <div class="col-6 d-lg-none"></div><?php
+          <div class="col-6 d-none d-md-block"></div>
+          <div class="col-4 d-md-none"></div><?php
                 }
 ?>
           <div class="col-1 d-none d-lg-block"><?php echo applyFactor($goala[$st - 1][$i][$n], $goalfaktor); ?> : <?php echo applyFactor($goalb[$st - 1][$i][$n], $goalfaktor); ?> <?php echo $mspez[$st - 1][$i][$n]; ?></div>

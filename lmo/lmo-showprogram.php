@@ -60,7 +60,7 @@ if ($file != '') {
                     if ($datm == 1) {
                         if ($mterm[$j][$i] > 0) {
                             $dum1 = datefmt_format($fmt, $mterm[$j][$i]);
-                            $dum2 = date('d.m.y', $mterm[$j][$i]);
+                            $dum2 = date('d.m.', $mterm[$j][$i]);
                         } else {
                             $dum1 = $dum2 = '';
                         }
@@ -78,16 +78,22 @@ if ($file != '') {
                         $heim2 = '</strong>';
                     }
 ?>
-          <div class="col-3 text-end d-none d-lg-block">
+          <div class="col-3 text-end d-none d-xl-block">
           <?php
                     echo $heim1 . $teams[$teama[$j][$i]] . $heim2;
-                    // echo HTML_smallTeamIcon($file,$teams[$teama[$j][$i]]," style='vertical-align: middle;'"," alt=''")."&nbsp;";
+                    echo HTML_smallTeamIcon($file,$teams[$teama[$j][$i]]," style='vertical-align: middle;'"," alt=''")."&nbsp;";
 ?>
           </div>
-          <div class="col-3 text-end d-lg-none">
+          <div class="col-3 text-end d-none d-md-block d-lg-block d-xl-none">
+          <?php
+                    echo $heim1 . $teamm[$teama[$j][$i]] . $heim2;
+                    echo HTML_smallTeamIcon($file,$teams[$teama[$j][$i]]," style='vertical-align: middle;'"," alt=''")."&nbsp;";
+?>
+          </div>
+          <div class="col-3 text-end d-md-none">
           <?php
                     echo $heim1 . $teamk[$teama[$j][$i]] . $heim2;
-                    // echo HTML_smallTeamIcon($file,$teams[$teama[$j][$i]]," style='vertical-align: middle;'"," alt=''")."&nbsp;";
+                    echo HTML_smallTeamIcon($file,$teams[$teama[$j][$i]]," style='vertical-align: middle;'"," alt=''")."&nbsp;";
 ?>
           </div>
           <?php
@@ -100,16 +106,22 @@ if ($file != '') {
                     }
 ?>
 
-          <div class="col-3 text-start d-none d-lg-block"> -&nbsp;&nbsp;
+          <div class="col-3 text-start d-none d-xl-block"> -&nbsp;&nbsp;
           <?php
+                    echo HTML_smallTeamIcon($file,$teams[$teamb[$j][$i]]," style='vertical-align: middle;'"," alt=''")."&nbsp;";
                     echo $gast1 . $teams[$teamb[$j][$i]] . $gast2;
-                    // echo HTML_smallTeamIcon($file,$teams[$teamb[$j][$i]]," style='vertical-align: middle;'"," alt=''")."&nbsp;";
 ?>
           </div>
-          <div class="col-3 text-start d-lg-none"> -&nbsp;&nbsp; 
+          <div class="col-3 text-start d-none d-md-block d-lg-block d-xl-none"> -&nbsp;&nbsp; 
           <?php
+                    echo HTML_smallTeamIcon($file,$teams[$teamb[$j][$i]]," style='vertical-align: middle;'"," alt=''")."&nbsp;";
+                    echo $gast1 . $teamm[$teamb[$j][$i]] . $gast2;
+?>
+          </div>
+          <div class="col-3 text-start d-md-none"> -&nbsp;&nbsp; 
+          <?php
+                    echo HTML_smallTeamIcon($file,$teams[$teamb[$j][$i]]," style='vertical-align: middle;'"," alt=''")."&nbsp;";
                     echo $gast1 . $teamk[$teamb[$j][$i]] . $gast2;
-                    // echo HTML_smallTeamIcon($file,$teams[$teamb[$j][$i]]," style='vertical-align: middle;'"," alt=''")."&nbsp;";
 ?>
           </div>
           <div class="col-1 col-sm-auto"><?php echo applyFactor($goala[$j][$i], $goalfaktor); ?> : <?php echo applyFactor($goalb[$j][$i], $goalfaktor); ?></div><?php
