@@ -132,7 +132,7 @@ if ($save == 1) {
             <div class="col-auto"><?php echo $text[4]; ?></div>
             <div class="col-auto"><input class="form-control" type="text" name="ende" size="2" maxlength="4" value="<?php echo $ende1; ?>"></div>
             <div class="col-auto"><?php echo $text['tipp'][170]; ?></div>
-            <div class="col-auto"><input class="form-control" type="text" name="tage" size="2" maxlength="2" value="<?php echo $tage; ?>" onFocus="emailart[2].checked=true;changetextarea(1);"></div>
+            <div class="col-auto"><input class="form-control" type="text" name="tage" size="2" maxlength="2" value="<?php echo $tage; ?>" onFocus="emailart[2].checked=true;"></div>
             <div class="col-auto"><?php echo ' ' . $text['tipp'][171]; ?></div>
           </div><?php
 if ($save == 1) {
