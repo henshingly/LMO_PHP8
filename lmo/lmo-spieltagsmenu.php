@@ -27,19 +27,19 @@ if (isset($anzst)) {
 
         if ($i != $st || empty($tabdat)) {
             if (isset($todo) && $todo == 'tabs') {
-                echo "<a class='btn btn-sm' href='" . $addb . $i . "' data-bs-toggle='tooltip' data-bs-placement='top' title='" . $k . "'>" . $j . '</a>';
+                echo "<a class='btn btn-sm' href='" . $addb . $i . "' data-bs-toggle='tooltip' data-bs-placement='top' title='" . $k . "'>" . $j . "</a>";
             } else {
                 if ($i == $st) {
-                    echo "<a class='btn btn-sm btn-info' href='" . $addr . $i . "' data-bs-toggle='tooltip' data-bs-placement='top' title='" . $k . "'>" . $j . '</a>';
+                    echo "<a class='btn btn-sm btn-info' href='" . $addr . $i . "' data-bs-toggle='tooltip' data-bs-placement='top' title='" . $k . "'>" . $j . "</a>";
                 } else {
-                    echo "<a class='btn btn-sm' href='" . $addr . $i . "' data-bs-toggle='tooltip' data-bs-placement='top' title='" . $k . "'>" . $j . '</a>';
+                    echo "<a class='btn btn-sm' href='" . $addr . $i . "' data-bs-toggle='tooltip' data-bs-placement='top' title='" . $k . "'>" . $j . "</a>";
                 }
             }
         } else {
-            echo "<a class='btn btn-sm btn-info' href='" . $addr . $i . "' data-bs-toggle='tooltip' data-bs-placement='top' title='" . $k . "'>" . $j . '</a>';
+            echo "<a class='btn btn-sm btn-info' href='" . $addr . $i . "' data-bs-toggle='tooltip' data-bs-placement='top' title='" . $k . "'>" . $j . "</a>";
         }
-        echo '&nbsp;';
-        $break = "</div></div><div class='row p-2'><div class='col justify-content-center'>";
+        echo "\n";
+        $break = "</div>\n</div>\n<div class='row p-2'>\n<div class='col justify-content-center'>\n";
         if (($anzst > 47) && (($anzst % 4) == 0)) {
             if (($i == $anzst / 4) || ($i == $anzst / 2) || ($i == $anzst / 4 * 3)) {
                 echo $break;

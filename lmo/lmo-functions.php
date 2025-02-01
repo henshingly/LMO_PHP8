@@ -165,7 +165,7 @@ function getLangSelector()
             $imgfile = URL_TO_IMGDIR . '/' . $lang[1] . '.svg';
             if ($lang[1] == $_SESSION['lmouserlang']) //{
                 $border=2;
-            $output_sprachauswahl .= "<a href='{$_SERVER['PHP_SELF']}?" . htmlentities(preg_replace('/&?lmouserlang=.+?\b/', '', $_SERVER['QUERY_STRING'])) . "&amp;lmouserlang={$lang[1]}' title='{$lang[1]}'><img src='{$imgfile}' title='{$lang[1]}' border='$border' width='20' alt='{$lang[1]}'></a> ";
+            $output_sprachauswahl .= "<a href='{$_SERVER['PHP_SELF']}?" . htmlentities(preg_replace('/&?lmouserlang=.+?\b/', '', $_SERVER['QUERY_STRING'])) . "&amp;lmouserlang={$lang[1]}' title='{$lang[1]}'><img src='{$imgfile}' title='{$lang[1]}' border='$border' width='20' alt='{$lang[1]}'></a>\n";
             $border=0;
         }
     }
