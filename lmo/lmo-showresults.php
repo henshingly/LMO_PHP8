@@ -152,7 +152,7 @@ foreach ($datsort as $key => $val) {
                 $lmo_spielbericht = $lmo_teamaicon . '<strong>' . $teams[$teama[$st - 1][$i]] . '</strong> &ndash; ' . $lmo_teambicon . '<strong>' . $teams[$teamb[$st - 1][$i]] . '</strong><br /><br />';
                 echo " <a href='" . $mberi[$st - 1][$i] . "' target='_blank' data-bs-toggle='tooltip' data-bs-placement='top' data-bs-html='true' title='" . nl2br($text[270]) . "'><i class='far fa-book fa-lg text-success'></i></a>";
             } else {
-                echo " <img src='" . URL_TO_IMGDIR . "/blank.png' width='19' height='1' border='0' alt=''>";
+                echo " <img src='" . URL_TO_IMGDIR . "/blank.png' width='19' border='0' alt=''>";
             }
         }
         /** Notizen anzeigen */
@@ -181,7 +181,7 @@ foreach ($datsort as $key => $val) {
             echo "<a data-bs-toggle='tooltip' data-bs-placement='right' data-bs-html='true' title='" . $lmo_spielnotiz . "'> <i class='bi bi-info-square text-info' style='font-size: 1.3rem;'></i></a>";
             $lmo_spielnotiz = '';
         } else {
-            echo " <img src='" . URL_TO_IMGDIR . "/blank.png' width='1' height='1' border='0' alt=''>";
+            echo " <img src='" . URL_TO_IMGDIR . "/blank.png' width='1' border='0' alt=''>";
         }
 ?></div>
   </div><?php }

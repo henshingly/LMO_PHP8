@@ -144,7 +144,7 @@ if ($file != '') {
                             $lmo_spielbericht = $lmo_teamaicon . '<strong>' . $teams[$teama[$j][$i]] . '</strong> - ' . $lmo_teambicon . '<strong>' . $teams[$teamb[$j][$i]] . '</strong><br><br>';
                             echo "<a href='" . $mberi[$j][$i] . "' target='_blank' title='" . nl2br($text[270]) . "'><i class='far fa-book fa-lg text-success'></i></a>";
                         } else {
-                            echo "<img src='" . URL_TO_IMGDIR . "/blank.png' width='19' height='1' border='0' alt=''>";
+                            echo "<img src='" . URL_TO_IMGDIR . "/blank.png' width='19' border='0' alt=''>";
                         }
                     }
                     echo '&nbsp;';
@@ -176,7 +176,7 @@ if ($file != '') {
                         echo "<a data-bs-toggle='tooltip' data-bs-placement='right' data-bs-html='true' title='" . $lmo_spielnotiz . "'> <i class='bi bi-info-square text-info' style='font-size: 1.3rem;'></i></a>";
                         $lmo_spielnotiz = '';
                     } else {
-                        echo "<img src='" . URL_TO_IMGDIR . "/blank.png' width='1' height='1' border='0' alt=''>";
+                        echo "<img src='" . URL_TO_IMGDIR . "/blank.png' width='1' border='0' alt=''>";
                     }
 ?></div>
           </div>
